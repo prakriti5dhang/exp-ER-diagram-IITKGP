@@ -9,6 +9,10 @@ function playsimulation(){
     document.getElementById("playbtn").disabled=true;
     document.getElementById("stp1").style.display="block";
     document.getElementById("p11").style.display="block";
+
+    setTimeout(s11, 1000);
+
+    function s11(){
     document.getElementById("s1").style.display="block";
     document.getElementById("nextbtn").style.display="block";
     document.getElementById("nextbtn").disabled=true;
@@ -16,6 +20,7 @@ function playsimulation(){
     document.getElementById("stp1").disabled=false;
 
     setTimeout(s12, 1000);
+    }
 
     function s12(){
         document.getElementById("s2").style.display="block";
@@ -160,4 +165,5 @@ function gostep1(){
     document.getElementById("nextbtn").disabled=true;
     document.getElementById("prebtn").disabled=true;
     document.getElementById("stp1").disabled=false;
+
 }
