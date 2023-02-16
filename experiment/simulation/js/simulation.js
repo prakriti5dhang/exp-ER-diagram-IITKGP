@@ -204,3 +204,6 @@ function gostep1(){
     setTimeout(s11, 1000);
 }
 
+function replaybtn(){
+    location.reload();
+}
