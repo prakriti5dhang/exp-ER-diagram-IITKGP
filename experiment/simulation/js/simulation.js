@@ -10,7 +10,7 @@ function playsimulation(){
     document.getElementById("stp1").style.display="block";
     document.getElementById("p11").style.display="block";
 
-    setTimeout(s11, 1000);
+    setTimeout(s11, 1000);}
 
     function s11(){
     document.getElementById("s1").style.display="block";
@@ -40,13 +40,10 @@ function s15(){
     document.getElementById("nextbtn").disabled=false;
 }
 
-}
 
-function goback(){
 
-}
 var count=0;
-countnxtbtn;
+var countnxtbtn;
 function gonext(){
     count++;
     countnxtbtn=count;
@@ -141,29 +138,69 @@ function stp1m(){
     document.getElementById("s1m").style.display="block";
     document.getElementById("nextbtn").disabled=false;
     
+
     }
+
+
+
 
 }
 if(countnxtbtn == 5){
     document.getElementById("nextbtn").disabled=true;
     document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="block";
     document.getElementById("stp1").disabled=false;
+    document.getElementById("stp2").style.display="block";
     document.getElementById("stp2").disabled=false;
     document.getElementById("head1").innerText="Draw Entity";
+    document.getElementById("p6").style.display="block";
     
+    
+     setTimeout(shwprimarykey, 1500);
+   
+
+    
+
+    function shwprimarykey(){
+      
+       
+        document.getElementById("primarykey1").style.display="block";
+        
+        setTimeout(nexter2, 2000);
+    }
+
+    
+
+    function nexter2(){
+       
+        
+        document.getElementById("nextbtn").disabled=false;
+    }
      
 }
+
+
 }
 
+
+
+function goback(){
+    count--;
+    countnxtbtn=count;
+     if(countnxtbtn == 1){
+
+     }
+
+}
 
 function gostep1(){
     document.getElementById("stp1").style.display="block";
     document.getElementById("p11").style.display="block";
     document.getElementById("s1").style.display="block";
     document.getElementById("nextbtn").style.display="block";
+    document.getElementById("p6").style.display="none";
     document.getElementById("nextbtn").disabled=true;
     document.getElementById("prebtn").disabled=true;
     document.getElementById("stp1").disabled=false;
-
+    setTimeout(s11, 1000);
 }
+
