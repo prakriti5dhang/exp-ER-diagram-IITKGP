@@ -946,14 +946,13 @@ function goback14(){
 
 /* start from step 1 */
 function gostep1(){
-    playsimulation();
+   
     
     document.getElementById("p2").style.display="none";
     document.getElementById("p3").style.display="none";
     document.getElementById("p6").style.display="none";
     document.getElementById("p4").style.display="none";
     document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
     document.getElementById("p7").style.display="none";
     document.getElementById("p8").style.display="none";
     document.getElementById("p9").style.display="none";
@@ -963,16 +962,16 @@ function gostep1(){
     document.getElementById("p13").style.display="none";
     document.getElementById("p14").style.display="none";
     document.getElementById("p15").style.display="none";
+    playsimulation();
 }
 /* start  from step2 */
 function gostep2(){
-    gonextstep2();
+    
     document.getElementById("p1").style.display="none";
+    document.getElementById("p2").style.display="none";
     document.getElementById("p3").style.display="none";
-    document.getElementById("p6").style.display="none";
     document.getElementById("p4").style.display="none";
     document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
     document.getElementById("p7").style.display="none";
     document.getElementById("p8").style.display="none";
     document.getElementById("p9").style.display="none";
@@ -982,35 +981,53 @@ function gostep2(){
     document.getElementById("p13").style.display="none";
     document.getElementById("p14").style.display="none";
     document.getElementById("p15").style.display="none";
+    gonextstep2();
 }
 
 /* start  from step3 */
 function gostep3(){
-    gonextstep3();
+   
     document.getElementById("p1").style.display="none";
     document.getElementById("p2").style.display="none";
-    document.getElementById("p6").style.display="none";
+    document.getElementById("p3").style.display="none";
     document.getElementById("p4").style.display="none";
     document.getElementById("p5").style.display="none";
     document.getElementById("p6").style.display="none";
     document.getElementById("p7").style.display="none";
     document.getElementById("p8").style.display="none";
     document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
     document.getElementById("p111").style.display="none";
     document.getElementById("p12").style.display="none";
     document.getElementById("p13").style.display="none";
     document.getElementById("p14").style.display="none";
     document.getElementById("p15").style.display="none";
+    gonextstep3();
 }
 
 /* start  from step4 */
 function gostep4(){
-    gonextstep4();
+    document.getElementById("p1").style.display="none";
     document.getElementById("p2").style.display="none";
     document.getElementById("p3").style.display="none";
+    document.getElementById("p4").style.display="none";
+    document.getElementById("p5").style.display="none";
     document.getElementById("p6").style.display="none";
+    document.getElementById("p7").style.display="none";
+    document.getElementById("p8").style.display="none";
+    document.getElementById("p9").style.display="none";
+    document.getElementById("p10").style.display="none";
+    document.getElementById("p12").style.display="none";
+    document.getElementById("p13").style.display="none";
+    document.getElementById("p14").style.display="none";
+    document.getElementById("p15").style.display="none";
+    gonextstep4();
+}
+/* start  from step5 */
+function gostep5(){
     document.getElementById("p1").style.display="none";
+    document.getElementById("p2").style.display="none";
+    document.getElementById("p3").style.display="none";
+    document.getElementById("p4").style.display="none";
     document.getElementById("p5").style.display="none";
     document.getElementById("p6").style.display="none";
     document.getElementById("p7").style.display="none";
@@ -1018,35 +1035,17 @@ function gostep4(){
     document.getElementById("p9").style.display="none";
     document.getElementById("p10").style.display="none";
     document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
     document.getElementById("p13").style.display="none";
     document.getElementById("p14").style.display="none";
     document.getElementById("p15").style.display="none";
-}
-/* start  from step5 */
-function gostep5(){
     gonextstep5();
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p1").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
 }
 
 
 function replaybtn(){
     //location.reload();
     playsimulation();
+    document.getElementById("replaybtn").disabled=true;
     document.getElementById("p2").style.display="none";
     document.getElementById("p3").style.display="none";
     document.getElementById("p6").style.display="none";
