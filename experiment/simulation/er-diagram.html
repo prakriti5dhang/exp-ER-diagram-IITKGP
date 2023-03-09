@@ -120,7 +120,7 @@ Author: Prakriti Dhang
       <tbody>
         <tr>
           <td><input class="form-control border-primary " type="text" id="inp1" ></td>
-          <td><input class="border-primary" type="checkbox" id="inp2" ></td>
+          <td><input class="border-primary" type="checkbox" name="weakent" id="chkinp1" value="Weak" > Weak </td>
           <td style="text-align: center;"><button id="t1addbtn" class="btn btn-primary" type="button" onclick="addbtnt1()"  ><i class="bi bi-plus-lg"></i>Add</button></td>
         </tr>
       </tbody>
@@ -147,8 +147,8 @@ Author: Prakriti Dhang
             
           </select>
         </td>
-        <td><input class="form-control border-primary " type="text" id="inp3" ></td>
-        <td><input class="border-primary" type="checkbox" id="inp4" ></td>
+        <td><input class="form-control border-primary " type="text" id="inp2" ></td>
+        <td><input class="border-primary" type="checkbox" id="chkinp2" > Primary Key</td>
         <td  style="text-align: center;"><button id="t2addbtn" class="btn btn-primary" type="button" onclick="addbtnt2()" ><i class="bi bi-plus-lg"></i>Add</button></td>
       </tr>
     </tbody>
@@ -179,7 +179,7 @@ Author: Prakriti Dhang
       </select>
      </td>
      <td>
-      <input class="form-control border-primary " type="text" id="inp5" >
+      <input class="form-control border-primary " type="text" id="inp3" >
      </td>
      <td><select id="selectent32" class="form-select float-center border border-2 border-primary" aria-label="Default select example" >
        
@@ -187,10 +187,10 @@ Author: Prakriti Dhang
      </select></td>
      
      <td><select id="selectconst" class="form-select float-center border border-2 border-primary" aria-label="Default select example" >
-      <option value="mm" selected>Many to Many</option>
-      <option value="om">One to Many</option>
-      <option value="mo">Many to One</option>
-      <option value="oo">One to One</option>
+      <option value="mtm" selected>Many to Many</option>
+      <option value="otm">One to Many</option>
+      <option value="mto">Many to One</option>
+      <option value="oto">One to One</option>
       
     </select></td>
      <td style="text-align: center;"><button id="t3addbtn" class="btn btn-primary" type="button" onclick="addbtnt3()" ><i class="bi bi-plus-lg"></i>Add</button></td>
@@ -213,21 +213,9 @@ Author: Prakriti Dhang
       <th>Weak</th>
       
     </thead>
-    <tbody>
-      <tr>
-        <td>
-          <ul id="ent">
-
-          </ul>
-
-        </td>
-        <td>
-        <ul id="attri">
-            
-          </ul>
-        </td>
-        <td></td>
-      </tr>
+    <tbody id="tbodyt4">
+      
+     
     </tbody>
 
   </table>
@@ -474,14 +462,16 @@ Author: Prakriti Dhang
 				<div class="card border border-2 border-warning p-2" id="dispres" style="display:none;">
   <div class="card-body">
 	<label for="result" class="form-label fs-4" style="color: brown; font-weight: bold;">Result</label>
-   <div style="font-size: medium;" id="show_result"  style=" display: none;" >
+   <div style="font-size: medium;" id="show_result1"  style=" display: none;" >
    
-  
+  <img src="./images/solution_er_diag.png" class="img-fluid"  alt="er-diagram-solution">
   
 
 
- <button type="button" class="btn btn-info border-primary" id="viewsol" onclick="solview()" disabled>View Solution</button>
+ 
 </div>
+<br>
+<button type="button" class="btn btn-info border-primary" id="viewsol" onclick="solview()" disabled>View Solution</button>
 </div> <!-- Card body ended for result display-->
 </div> <!-- Card  ended for result display-->
 
