@@ -59,26 +59,31 @@ function solview(){
 
 
 let  inpt1;
+let newtrID, newtdID;
+let  newtd,  newtdw, newtdwn,  newtda, newtda2 ;
+var newtr;
+var checkedvalue;
+var myarray = [];
 function addbtnt1(){
-let  newtd,  newtdw, newtdwn,  newtda ;
-let newtrID;
+
 inpt1=document.getElementById("inp1").value;
-var checkedvalue= document.getElementById("chkinp1");
+checkedvalue= document.getElementById("chkinp1");
   
+
 
 
   var newIconbtn = document.createElement("img");
   newIconbtn.setAttribute("src","./images/remove.png");
-  newIconbtn.setAttribute("onclick", "removerowuc(this)");
+  newIconbtn.setAttribute("onclick", "removerow(this)");
   newIconbtn.setAttribute("style","cursor:pointer;");
 
   
-newtrID = 'newtr_' + inpt1;
+newtrID =  inpt1;
   //rbtn.appendChild(newIconbtn);   
-var newtr=document.createElement("tr");
+newtr=document.createElement("tr");
 newtr.setAttribute("id",newtrID);
 newtd = document.createElement("td");
-newtd.setAttribute("id","ent");
+newtd.setAttribute("class","ent");
 //newdiv = document.createElement("div");
 //newdiv.setAttribute("class", "form-check");
 newtr.appendChild(newtd);
@@ -86,26 +91,29 @@ newtr.appendChild(newtd);
 
 let liTextNodeact = document.createTextNode(inpt1);
 newtd.appendChild(liTextNodeact);
-newtd.appendChild(newIconbtn);
-
+//newtd.appendChild(newIconbtn);
 
 /**** Attribute *****/
-
+newtdID =  "attri" +inpt1;
 newtda = document.createElement("td");
-newtda.setAttribute("id","attri");
+newtda.setAttribute("id",newtdID);
 newtr.appendChild(newtda);
 let liTextNodeacta = document.createTextNode("");
 newtda.appendChild(liTextNodeacta);
 
+myarray.push(inpt1);
+
   if (inpt1 == "") {
-    alert("Please Enter Noun/Noun Phrase Before Click Add Button");
+    alert("Please Enter Entity Before Clicking Add Button");
 
   } else if((inpt1 !== "") && (checkedvalue.checked) ){
+
+    
 
     /**** Weak entity ****/
 
 newtdw = document.createElement("td");
-newtdw.setAttribute("id","wentity");
+newtdw.setAttribute("class","wentity");
 newtr.appendChild(newtdw);
 
 
@@ -165,6 +173,7 @@ newOption3.setAttribute('value',inpt1);
 let select3 = document.getElementById('selectent32'); 
 select3.appendChild(newOption3);
 
+
 }
 
 
@@ -172,10 +181,12 @@ select3.appendChild(newOption3);
 
 else if((inpt1 !== "") && (checkedvalue.checked == false) ){
 
+
+
   /**** Not a Weak entity ****/
   newtdwn = document.createElement("td");
-newtdwn.setAttribute("id","nwentity");
-newdivwn = document.createElement("div");
+newtdwn.setAttribute("class","nwentity");
+//newdivwn = document.createElement("div");
 
 newtr.appendChild(newtdwn);
 
@@ -235,19 +246,32 @@ select3.appendChild(newOption3);
 
 }
 
-else if ((inpt1 == inpt1 )){
-
-  alert("Entity is already entered");
 
 
-}
-else if((inpt1 !== inpt1 )){
+
+  
+
+
+
+//else if((inpt1 !== inpt1 ) && (checkedvalue.checked == false)){
+  /**** Attribute *****/
+
+/*newtda2 = document.createElement("td");
+newtda2.setAttribute("id",newtdID);
+newtr.appendChild(newtda2);
+let liTextNodeacta = document.createTextNode("");
+newtda2.appendChild(liTextNodeacta);
   document.getElementById('row2').appendChild(newtd);
-  document.getElementById('row2').appendChild(newtda);
+  document.getElementById('row2').appendChild(newtda2);
   document.getElementById('row2').appendChild(newtdwn);
-}
+}*/
+
 document.getElementById("ftbl1").reset();
 }
+
+
+
+
 
  /*************************************Function for Table 2***********************************************/  
 let  inpt2;
@@ -255,43 +279,110 @@ let  inpt2;
  function addbtnt2() {
     
 
-  let   newLi, newdiv;
+  let   newLi;
   inpt2=document.getElementById("inp2").value;
-
+  var selent= document.getElementById("selectentity");
+  var entval =selent.options[selent.selectedIndex].value;
+  
   /* var rbtn=document.createElement("button");
   rbtn.setAttribute("id", "removebtnuc");
   rbtn.setAttribute("type", "button");
   rbtn.setAttribute("class", "btn btn-danger");
   rbtn.setAttribute("onclick", "removerowuc(this)"); */
 
-  var newIconbtn = document.createElement("img");
+  
+
+ 
+
+      
+          let Cell= document.getElementById("tbl4").rows[1].cells;
+          var cellval= Cell[0].innerHTML;
+         // let Cell2= document.getElementById("tbl4").rows[1].cells;
+          //var cellval2= Cell2[2].innerHTML;
+         // alert(cellval);
+         
+          let Cell20= document.getElementById("tbl4").rows[2].cells;
+          var cellval20= Cell20[0].innerHTML;
+          //let Cell22= document.getElementById("tbl4").rows[2].cells;
+         // var cellval22= Cell22[2].innerHTML;
+
+          var newIconbtn = document.createElement("img");
   newIconbtn.setAttribute("src","./images/remove.png");
   newIconbtn.setAttribute("onclick", "removerowuc(this)");
   newIconbtn.setAttribute("style","cursor:pointer;");
 
-  newLi = document.createElement("li");
-  newdiv = document.createElement("div");
-  newdiv.setAttribute("class", "form-check");
-  newLi.appendChild(newdiv);
-  
-  let liTextNodeuc = document.createTextNode(inpt2);
-  newdiv.appendChild(liTextNodeuc);
-  newdiv.appendChild(newIconbtn); 
-          // this just makes sure a user cant enter in a blank value
-    
+newLi = document.createElement("li");
+let liTextNodeuc = document.createTextNode(inpt2);
+  newLi.appendChild(liTextNodeuc);
+  newLi.appendChild(newIconbtn); 
+         // alert(cellval2);
+
     if (inpt2 == "") {
-      alert("Please Enter Noun/Noun Phrase Before Click Add Button");
+      alert("Please Enter Attribute Before Clicking Add Button");
     } 
     
-   
-      else {
-  
-    document.getElementById('attri').appendChild(newLi);
     
-   
+      else if(entval == cellval)   {
+  
+        /*var table = document.getElementById("tbl4");
+        var row = table.insertRow(1);
+       var cellr10 = row.insertCell(0);
+        var cellr11 = row.insertCell(1);
+        var cellr12 = row.insertCell(2);
+        cellr10.innerHTML = entval;
+        cellr11.appendChild(newLi);
+        cellr12.innerHTML = cellval2;*/
+        document.getElementById(newtdID).appendChild(newLi);
+        /*var cellr11 = Cell[1].appendChild(newLi);
+        newtr.appendChild(cellr11);
+        document.getElementById('tbodyt4').appendChild(newtr);*/
+       /* var tablebody = document.getElementById("tbodyt4");
+        var row = document.createElement("tr");
+var cell1 = document.createElement("td");
+var cell2 = document.createElement("td");
+var cell3 = document.createElement("td");
+
+
+
+ cell1.innerHTML = entval;
+ cell2.appendChild(newLi);
+ cell3.innerHTML = cellval2;
+ row.appendChild(cell1);
+ row.appendChild(cell2);
+ row.appendChild(cell3);
+ tablebody.appendChild(row);*/
+        /*var row = table.insertRow(1);
+        var cell0 = row.insertCell(0);
+        var cell1 = row.insertCell(1);
+        cell0.innerHTML = entval;
+        cell1.innerHTML = inpt2;*/
+       
+       // document.getElementById('tbodyt4').appendChild(newtr);
+       // document.getElementById('attri').appendChild(newLi);
+       // document.getElementById('tbodyt4').appendChild(newtr);
    
       }
 
+      else if(entval == cellval20) { 
+        document.getElementById(newtdID).appendChild(newLi);
+      }
+       /* var table = document.getElementById("tbl4");
+        var row = table.insertRow(2);
+       var cell0 = row.insertCell(0);
+        var cell1 = row.insertCell(1);
+        var cell2 = row.insertCell(2);
+        cell0.innerHTML = entval;
+        cell1.appendChild(newLi);
+        cell2.innerHTML = cellval22;*/
+        
+        //document.getElementById('attri2').appendChild(newLi);
+        //document.getElementById('tbodyt4').appendChild(newtr);
+        //
+        //document.getElementById('tbodyt4').appendChild(newtr);
+   
+      //}
+
+    
 
   document.getElementById("ftbl2").reset();
 
@@ -393,105 +484,46 @@ else if((dobj1 !== dobj2)){
 
 
 
-
-
-
-
-
-/********************************************************** Function for Table 7*****************************************************************/
-
-var inpt3;
-function addbtnt7(){
-     inpt3 =document.getElementById("inp3").value;
-     alert(inpt3);
-     var checkedvaluet7= document.querySelector('input[type=checkbox][name=attricheck]:checked').value;
-     alert(checkedvaluet7);
- if((inpt3=="person") && ((checkedvaluet7 == "Name") ||(checkedvaluet7 == "Address")||(checkedvaluet7 == "Height")||(checkedvaluet7 == "Weight"))){
-  var tr = document.createElement('tr');
-  tr.setAttribute("id","t8class1");
-  document.getElementById('tbodytbl8').appendChild(tr);
-  var td = document.createElement('td');
-  var td2=document.createElement("td");
-  var tdval=document.createTextNode(inpt3);
-  var tdval2=document.createTextNode(checkedvaluet7);
- // tbody.appendChild(tr);
-  
-  var ult8=document.createElement("ul");
- var lit8= document.createElement("li");
-  
-  tr.appendChild(td);
-  tr.appendChild(td2);
-  td.appendChild(tdval);
-  
-  td2.appendChild(ult8);
-  ult8.appendChild(lit8);
-  lit8.appendChild(tdval2);
+function removerow(btndel) {
+  if (typeof(btndel) == "object") {
+      $(btndel).closest("tr").remove();
+      
+  } 
  
-  
-  document.getElementById('t8class1').appendChild(tr);
 
- }
- else if((inpt3=="Employee") && ((checkedvaluet7 == "Name") ||(checkedvaluet7 == "Address"))){
-  var tr2 = document.createElement('tr');
-  tr2.setAttribute("id","t8class2");
-  document.getElementById('tbodytbl8').appendChild(tr);
-  var td2 = document.createElement('td');
-  var td12=document.createElement("td");
-  var tdval2=document.createTextNode(inpt3);
-  var tdval12=document.createTextNode(checkedvaluet7);
- // tbody.appendChild(tr);
-  
-  var ult8=document.createElement("ul");
- var lit8= document.createElement("li");
-  
-  tr2.appendChild(td2);
-  tr2.appendChild(td12);
-  td2.appendChild(tdval2);
-  
-  td12.appendChild(ult8);
-  ult8.appendChild(lit8);
-  lit8.appendChild(tdval12);
- 
-  
-  document.getElementById('t8class2').appendChild(tr);
- }
- else{
-
- }
-
-
-     
-
-
-     
+  else {
+     return false;
+  }
 }
 
 
+function removerowuc(btndel) {
 
+if (typeof(btndel) == "object") {
 
-
-
-/********************************************************** Function for Top Level Classes*****************************************************************/
-
-function btntlc(){
-    document.getElementById("t10class").innerHTML=inpt3;
-    document.getElementById("t10obj").innerHTML=inpt1;
-}
-
-
-
- /*var tabrowindex=0;
-    arr[0] =inpt1;
-    adtbl2= document.getElementById('tbl2');
-    tabrowindex + 1;
+    $(btndel).closest("li").remove();
    
+   // x.remove(typeof(btndel));
+   
+} else {
+    return false;
+}
 
-   var row = adtbl2.insertRow(++tabrowindex); // Row increment
-    for (var q = 0; q <1; ++q) {
 
-        var cell = row.insertCell(q);
-        cell.innerHTML = arr[q];
-        //
-    }*/
+}
 
-// //document.getElementById("tbl2").rows[1].cells[0].innerHTML = inpt1;
+
+
+
+
+     
+
+
+     
+
+
+
+
+
+
+
