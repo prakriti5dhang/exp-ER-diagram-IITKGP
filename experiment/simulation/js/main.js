@@ -14,6 +14,7 @@ function subex(){
         document.getElementById("ex2").style.display="none";    
         document.getElementById("dispres").style.display="block";
         document.getElementById("show_result1").style.display="none";
+        document.getElementById("show_result2").style.display="none";
         document.getElementById("dispviewbtn").disabled=false;
         document.getElementById("viewsol").disabled=true;
        
@@ -25,6 +26,7 @@ function subex(){
       document.getElementById("ex2").style.display="block"; 
       document.getElementById("dispres").style.display="block";
       document.getElementById("show_result1").style.display="none";
+      document.getElementById("show_result2").style.display="none";
       document.getElementById("dispviewbtn").disabled=false;
       document.getElementById("viewsol").disabled=true;
      
@@ -36,6 +38,7 @@ function subex(){
         document.getElementById("exercise2").style.display="none";
         document.getElementById("dispres").style.display="none";
         document.getElementById("show_result1").style.display="none";
+        document.getElementById("show_result2").style.display="none";
         document.getElementById("dispviewbtn").disabled=true;
         document.getElementById("viewsol").disabled=true;
         
@@ -49,10 +52,19 @@ function viewsolutionb(){
 }
 
 function solview(){
-
+  if(ex.options[ex.selectedIndex].value==1){
   document.getElementById("dispres").style.display="block";
   document.getElementById("show_result1").style.display="block";
+  document.getElementById("show_result2").style.display="none";
   document.getElementById("viewsol").disabled=true;
+}
+if(ex.options[ex.selectedIndex].value==2){
+  document.getElementById("dispres").style.display="block";
+  document.getElementById("show_result2").style.display="block";
+  document.getElementById("show_result1").style.display="none";
+  document.getElementById("viewsol").disabled=true;
+}
+
 }
  
 /*********************************************Function for Table 1 ****************************************/
@@ -60,13 +72,15 @@ function solview(){
 
 let  inpt1;
 let newtrID, newtdID;
-let  newtd,  newtdw, newtdwn,  newtda, newtda2 ;
+let  newtd,  newtdw, newtdwn,  newtda, newtda2, newula, newulID ;
 var newtr;
 var checkedvalue;
 var myarray = [];
+var arrentity=[];
 function addbtnt1(){
 
 inpt1=document.getElementById("inp1").value;
+arrentity.push(inpt1);
 checkedvalue= document.getElementById("chkinp1");
   
 
@@ -94,12 +108,15 @@ newtd.appendChild(liTextNodeact);
 //newtd.appendChild(newIconbtn);
 
 /**** Attribute *****/
-newtdID =  "attri" +inpt1;
+newulID =  "attri_" +inpt1;
 newtda = document.createElement("td");
-newtda.setAttribute("id",newtdID);
+newula = document.createElement("ul");
+newula.setAttribute("id",newulID);
+
+newtda.appendChild(newula);
 newtr.appendChild(newtda);
 let liTextNodeacta = document.createTextNode("");
-newtda.appendChild(liTextNodeacta);
+newula.appendChild(liTextNodeacta);
 
 myarray.push(inpt1);
 
@@ -275,7 +292,8 @@ document.getElementById("ftbl1").reset();
 
  /*************************************Function for Table 2***********************************************/  
 let  inpt2;
- 
+var arrattri1=[];
+var arrattri2=[];
  function addbtnt2() {
     
 
@@ -295,16 +313,12 @@ let  inpt2;
  
 
       
-          let Cell= document.getElementById("tbl4").rows[1].cells;
+          /*let Cell= document.getElementById("tbl4").rows[1].cells;
           var cellval= Cell[0].innerHTML;
-         // let Cell2= document.getElementById("tbl4").rows[1].cells;
-          //var cellval2= Cell2[2].innerHTML;
-         // alert(cellval);
          
           let Cell20= document.getElementById("tbl4").rows[2].cells;
-          var cellval20= Cell20[0].innerHTML;
-          //let Cell22= document.getElementById("tbl4").rows[2].cells;
-         // var cellval22= Cell22[2].innerHTML;
+          var cellval20= Cell20[0].innerHTML;*/
+        
 
           var newIconbtn = document.createElement("img");
   newIconbtn.setAttribute("src","./images/remove.png");
@@ -321,66 +335,27 @@ let liTextNodeuc = document.createTextNode(inpt2);
       alert("Please Enter Attribute Before Clicking Add Button");
     } 
     
+    else{
+      document.getElementById("attri_"+entval ).appendChild(newLi);
+    }
     
-      else if(entval == cellval)   {
+      /*else if(entval == cellval)   {
   
-        /*var table = document.getElementById("tbl4");
-        var row = table.insertRow(1);
-       var cellr10 = row.insertCell(0);
-        var cellr11 = row.insertCell(1);
-        var cellr12 = row.insertCell(2);
-        cellr10.innerHTML = entval;
-        cellr11.appendChild(newLi);
-        cellr12.innerHTML = cellval2;*/
-        document.getElementById(newtdID).appendChild(newLi);
-        /*var cellr11 = Cell[1].appendChild(newLi);
-        newtr.appendChild(cellr11);
-        document.getElementById('tbodyt4').appendChild(newtr);*/
-       /* var tablebody = document.getElementById("tbodyt4");
-        var row = document.createElement("tr");
-var cell1 = document.createElement("td");
-var cell2 = document.createElement("td");
-var cell3 = document.createElement("td");
-
-
-
- cell1.innerHTML = entval;
- cell2.appendChild(newLi);
- cell3.innerHTML = cellval2;
- row.appendChild(cell1);
- row.appendChild(cell2);
- row.appendChild(cell3);
- tablebody.appendChild(row);*/
-        /*var row = table.insertRow(1);
-        var cell0 = row.insertCell(0);
-        var cell1 = row.insertCell(1);
-        cell0.innerHTML = entval;
-        cell1.innerHTML = inpt2;*/
        
-       // document.getElementById('tbodyt4').appendChild(newtr);
-       // document.getElementById('attri').appendChild(newLi);
-       // document.getElementById('tbodyt4').appendChild(newtr);
-   
-      }
 
-      else if(entval == cellval20) { 
-        document.getElementById(newtdID).appendChild(newLi);
-      }
-       /* var table = document.getElementById("tbl4");
-        var row = table.insertRow(2);
-       var cell0 = row.insertCell(0);
-        var cell1 = row.insertCell(1);
-        var cell2 = row.insertCell(2);
-        cell0.innerHTML = entval;
-        cell1.appendChild(newLi);
-        cell2.innerHTML = cellval22;*/
-        
-        //document.getElementById('attri2').appendChild(newLi);
-        //document.getElementById('tbodyt4').appendChild(newtr);
-        //
-        //document.getElementById('tbodyt4').appendChild(newtr);
+       document.getElementById("attri_"+entval ).appendChild(newLi);
+      
+
+
+ 
    
-      //}
+      }*/
+
+      /*else if(entval == cellval20) { 
+        
+        document.getElementById("attri_"+entval ).appendChild(newLi);
+      }*/
+      
 
     
 
