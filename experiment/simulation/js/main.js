@@ -77,6 +77,8 @@ var newtr;
 var checkedvalue;
 var myarray = [];
 var arrentity=[];
+var arrrel=[];
+var arrconstrt=[];
 function addbtnt1(){
 
 inpt1=document.getElementById("inp1").value;
@@ -392,15 +394,16 @@ let liTextNodeuc = document.createTextNode(inpt2);
       var dobj1 =objsel1.options[objsel1.selectedIndex].value;
        //alert(dobj1);
        var inpt3=document.getElementById("inp3").value;
+       arrrel.push(inpt3);
        //alert(inpt3);
        var objsel2= document.getElementById("selectent32");
        var dobj2 =objsel2.options[objsel2.selectedIndex].value;
        // alert(dobj2);
         var objselcont= document.getElementById("selectconst");
         var dobjconst =objselcont.options[objselcont.selectedIndex].value;
-        // alert(dobjconst);
-  
-  
+        //alert(dobjconst);
+    arrconstrt=dobjconst.split(' ');
+  //console.log(arrconstrt);
   var rbtn=document.createElement("button");
   rbtn.setAttribute("id", "removebtn");
   rbtn.setAttribute("type", "button");
@@ -429,8 +432,8 @@ else if((dobj1 !== dobj2)){
   var td5=document.createElement("td");
   var tdval1=document.createTextNode(dobj1);
   var tdval2=document.createTextNode(inpt3);
-  var tdval3=document.createTextNode(dobjconst);
-  var tdval4=document.createTextNode(dobj2);
+  var tdval3=document.createTextNode(dobj2);
+  var tdval4=document.createTextNode(dobjconst);
   
   //var tdval5=document.appendChild(newIconbtn);
  // tbody.appendChild(tr);
@@ -489,7 +492,303 @@ if (typeof(btndel) == "object") {
 
 
 
+function drawbtnex21(){
 
+  var namespace = joint.shapes;
+
+        var graph = new joint.dia.Graph({}, { cellNamespace: namespace });
+
+        paper = new joint.dia.Paper({
+            el: document.getElementById('er_diag_ex1'),
+            model: graph,
+            //x: 0,
+            //y: 0,
+            //width: $('#ucdiagram1').width(),
+            //height:  $('#ucdiagram1').height(), // height had to be increased
+           
+            background: {
+                color: '#ffffff', //'rgba(0, 255, 0, 0.3)'
+            },
+            
+            cellViewNamespace: namespace
+        });
+
+
+/********************************* Entity 1 **************************************8*/
+        var entity1 = new joint.shapes.standard.Rectangle();
+        
+        entity1.position(169, 271);
+        entity1.resize(100, 40);
+        entity1.attr({
+            body: {
+                fill: '#ffffff',
+                strokeWidth: 2
+            },
+            label: {
+                text: arrentity[0],
+                fill: 'black',
+                fontSize: 16
+            }
+        });
+        entity1.addTo(graph);
+
+/********************************* Entity 2 **************************************8*/
+var entity2 = new joint.shapes.standard.Rectangle();
+entity2.position(499, 271);
+entity2.resize(100, 40);
+entity2.attr({
+            body: {
+                fill: '#ffffff',
+               
+                strokeWidth: 2
+            },
+            label: {
+                text: arrentity[1],
+                fill: 'black',
+                fontSize: 16
+            }
+        });
+        entity2.addTo(graph);
+
+/******************************************* Relation **********************************************/
+
+var diamondrel =  new joint.shapes.standard.Rectangle();
+
+  diamondrel.position(355,261);
+  diamondrel.resize(60,60);
+  
+diamondrel.attr({
+body:{
+  fill: '#ffffff', 
+strokeWidth: 2, 
+
+
+},
+label:{
+  text: arrrel[0],
+  fill: 'black',
+  fontSize: 16
+}
+ 
+});
+diamondrel.rotate(40);
+diamondrel.addTo(graph);
+/*************************** Attributes of first entity *************************************/
+
+
+var attri11 = new joint.shapes.standard.Ellipse();
+attri11.position(215, 163);
+
+attri11.resize(100, 40);
+attri11.attr({
+    body: {
+        fill: '#ffffff',
+        rx: 20,
+        ry: 20,
+        strokeWidth: 2
+    },
+    label: {
+        text: arrattri1[0],
+        fill: 'black',
+        fontSize: 16
+    }
+});
+attri11.addTo(graph);
+
+var attri12 = new joint.shapes.standard.Ellipse();
+attri12.position(55, 183);
+
+attri12.resize(100, 40);
+attri12.attr({
+    body: {
+        fill: '#ffffff',
+        rx: 20,
+        ry: 20,
+        strokeWidth: 2
+    },
+    label: {
+        text: arrattri1[1],
+        fill: 'black',
+        fontSize: 16
+    }
+});
+attri12.addTo(graph);
+
+var attri13 = new joint.shapes.standard.Ellipse();
+attri13.position(8, 271);
+
+attri13.resize(100, 40);
+attri13.attr({
+    body: {
+        fill: '#ffffff',
+        rx: 20,
+        ry: 20,
+        strokeWidth: 2
+    },
+    label: {
+        text: arrattri1[2],
+        fill: 'black',
+        fontSize: 16
+    }
+});
+attri13.addTo(graph);
+
+var attri14 = new joint.shapes.standard.Ellipse();
+attri14.position(68, 366);
+
+attri14.resize(100, 40);
+attri14.attr({
+    body: {
+        fill: '#ffffff',
+        rx: 20,
+        ry: 20,
+        strokeWidth: 2
+    },
+    label: {
+        text: arrattri1[3],
+        fill: 'black',
+        fontSize: 16
+    }
+});
+attri14.addTo(graph);
+
+
+/******************************* Attributes of second entity ***************************************/
+var attri21 = new joint.shapes.standard.Ellipse();
+attri21.position(578, 173);
+
+attri21.resize(100, 40);
+attri21.attr({
+    body: {
+        fill: '#ffffff',
+        rx: 20,
+        ry: 20,
+        strokeWidth: 2
+    },
+    label: {
+        text: arrattri2[0],
+        fill: 'black',
+        fontSize: 16
+    }
+});
+attri21.addTo(graph);
+
+
+
+var attri22 = new joint.shapes.standard.Ellipse();
+attri22.position(574, 371);
+
+attri22.resize(100, 40);
+attri22.attr({
+    body: {
+        fill: '#ffffff',
+        rx: 20,
+        ry: 20,
+        strokeWidth: 2
+    },
+    label: {
+        text: arrattri2[1],
+        fill: 'black',
+        fontSize: 16
+    }
+});
+attri22.addTo(graph);
+
+
+
+joint.shapes.standard.Link.define('examples.CustomLink', {
+  attrs: {
+      line: {
+          stroke: 'black',
+          strokeWidth: 2,
+          targetMarker: {
+              'type': 'rect',
+              'stroke': 'none'
+          }
+      }
+  },
+  
+});
+
+var link1 = new joint.shapes.examples.CustomLink();
+
+link1.source(entity1);
+link1.target(attri11);
+link1.addTo(graph);
+
+
+
+var link2 = new joint.shapes.examples.CustomLink();
+
+link2.source(entity1);
+link2.target(attri12);
+link2.addTo(graph);
+
+var link3 = new joint.shapes.examples.CustomLink();
+
+link3.source(entity1);
+link3.target(attri13);
+link3.addTo(graph);
+
+var link4 = new joint.shapes.examples.CustomLink();
+
+link4.source(entity1);
+link4.target(attri14);
+link4.addTo(graph);
+
+var link5 = new joint.shapes.examples.CustomLink();
+
+link5.source(entity2);
+link5.target(attri21);
+link5.addTo(graph);
+
+var link6 = new joint.shapes.examples.CustomLink();
+
+link6.source(entity2);
+link6.target(attri22);
+link6.addTo(graph);
+
+
+
+
+
+
+
+var link7 = new joint.shapes.examples.CustomLink();
+link7.source(entity1);
+link7.target(diamondrel);
+link7.addTo(graph);
+        link7.appendLabel({
+          attrs: {
+              text: {
+                  text: arrconstrt[0],
+                  fontSize: 16
+              }
+              
+        }
+      });
+      link7.addTo(graph);
+
+
+
+
+var link8 = new joint.shapes.examples.CustomLink();
+
+link8.source(entity2);
+link8.target(diamondrel);
+link8.addTo(graph);
+        link8.appendLabel({
+          attrs: {
+              text: {
+                  text: arrconstrt[2],
+                  fontSize: 16
+              }
+              
+        }
+      });
+link8.addTo(graph);
+
+}
 
      
 
