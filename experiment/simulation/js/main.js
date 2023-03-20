@@ -17,6 +17,11 @@ function subex(){
         document.getElementById("show_result2").style.display="none";
         document.getElementById("dispviewbtn").disabled=false;
         document.getElementById("viewsol").disabled=true;
+        document.getElementById("ftbl21").reset();
+        document.getElementById("ftbl22").reset();
+        document.getElementById("ftbl23").reset();
+        document.getElementById("ftbl24").reset();
+        document.getElementById("ftbl25").reset();
        
     }
     if(ex.options[ex.selectedIndex].value==2){
@@ -29,6 +34,11 @@ function subex(){
       document.getElementById("show_result2").style.display="none";
       document.getElementById("dispviewbtn").disabled=false;
       document.getElementById("viewsol").disabled=true;
+      document.getElementById("ftbl1").reset();
+      document.getElementById("ftbl2").reset();
+      document.getElementById("ftbl3").reset();
+      document.getElementById("ftbl4").reset();
+      document.getElementById("ftbl5").reset();
      
   }
     
@@ -41,6 +51,16 @@ function subex(){
         document.getElementById("show_result2").style.display="none";
         document.getElementById("dispviewbtn").disabled=true;
         document.getElementById("viewsol").disabled=true;
+        document.getElementById("ftbl1").reset();
+        document.getElementById("ftbl2").reset();
+        document.getElementById("ftbl3").reset();
+        document.getElementById("ftbl4").reset();
+        document.getElementById("ftbl5").reset();
+        document.getElementById("ftbl21").reset();
+        document.getElementById("ftbl22").reset();
+        document.getElementById("ftbl23").reset();
+        document.getElementById("ftbl24").reset();
+        document.getElementById("ftbl25").reset();
         
     }
 }
@@ -303,7 +323,7 @@ var arrattri2=[];
   inpt2=document.getElementById("inp2").value;
   var selent= document.getElementById("selectentity");
   var entval =selent.options[selent.selectedIndex].value;
-  
+  var checkedvalueprkey= document.getElementById("chkinp2");
   /* var rbtn=document.createElement("button");
   rbtn.setAttribute("id", "removebtnuc");
   rbtn.setAttribute("type", "button");
@@ -320,9 +340,22 @@ var arrattri2=[];
          
           let Cell20= document.getElementById("tbl4").rows[2].cells;
           var cellval20= Cell20[0].innerHTML;*/
-        
+   
+   if(checkedvalueprkey.checked){   
+  var primary_key="*";
+  var para = document.createElement("i");
+  let add_prkey = document.createTextNode(primary_key);
+  para.appendChild(add_prkey);
+   }
+   else{
+  var primary_key=" ";
+  var para = document.createElement("i");
+  let add_prkey = document.createTextNode(primary_key);
+  para.appendChild(add_prkey);
+   }
+  //document.body.appendChild(para);
 
-          var newIconbtn = document.createElement("img");
+  var newIconbtn = document.createElement("img");
   newIconbtn.setAttribute("src","./images/remove.png");
   newIconbtn.setAttribute("onclick", "removerowuc(this)");
   newIconbtn.setAttribute("style","cursor:pointer;");
@@ -330,6 +363,7 @@ var arrattri2=[];
 newLi = document.createElement("li");
 let liTextNodeuc = document.createTextNode(inpt2);
   newLi.appendChild(liTextNodeuc);
+  newLi.appendChild(para);
   newLi.appendChild(newIconbtn); 
          // alert(cellval2);
 
@@ -339,25 +373,18 @@ let liTextNodeuc = document.createTextNode(inpt2);
     
     else{
       document.getElementById("attri_"+entval ).appendChild(newLi);
+      var arrattri=arrattri1.push(inpt2);
+      console.log(arrattri);
     }
     
-      /*else if(entval == cellval)   {
-  
-       
+    
+   /* var attriarray=document.getElementById("attri_"+entval ).value;
+    console.log(arrattri1.push("attri_"+entval));
+    console.log(arrattri2.push("attri_"+entval));*/
 
-       document.getElementById("attri_"+entval ).appendChild(newLi);
-      
+    
 
-
- 
-   
-      }*/
-
-      /*else if(entval == cellval20) { 
-        
-        document.getElementById("attri_"+entval ).appendChild(newLi);
-      }*/
-      
+    
 
     
 
@@ -400,9 +427,10 @@ let liTextNodeuc = document.createTextNode(inpt2);
        var dobj2 =objsel2.options[objsel2.selectedIndex].value;
        // alert(dobj2);
         var objselcont= document.getElementById("selectconst");
-        var dobjconst =objselcont.options[objselcont.selectedIndex].value;
+        var dobjconst =objselcont.options[objselcont.selectedIndex].text;
+        var dobjconstraint =objselcont.options[objselcont.selectedIndex].value;
         //alert(dobjconst);
-    arrconstrt=dobjconst.split(' ');
+    arrconstrt=dobjconstraint.split(' ');
   //console.log(arrconstrt);
   var rbtn=document.createElement("button");
   rbtn.setAttribute("id", "removebtn");
@@ -634,7 +662,7 @@ attri13.attr({
 attri13.addTo(graph);
 
 var attri14 = new joint.shapes.standard.Ellipse();
-attri14.position(68, 366);
+attri14.position(13, 336);
 
 attri14.resize(100, 40);
 attri14.attr({
@@ -652,6 +680,50 @@ attri14.attr({
 });
 attri14.addTo(graph);
 
+var attri15 = new joint.shapes.standard.Ellipse();
+attri15.position(63, 394);
+
+attri15.resize(100, 40);
+attri15.attr({
+    body: {
+        fill: '#ffffff',
+        rx: 20,
+        ry: 20,
+        strokeWidth: 2
+    },
+    label: {
+        text: arrattri1[4],
+        fill: 'black',
+        fontSize: 16
+    }
+});
+attri15.addTo(graph);
+
+var attri16 = new joint.shapes.standard.Ellipse();
+attri16.position(179, 398);
+
+attri16.resize(100, 40);
+attri16.attr({
+    body: {
+        fill: '#ffffff',
+        rx: 20,
+        ry: 20,
+        strokeWidth: 2
+    },
+    label: {
+        text: arrattri1[5],
+        fill: 'black',
+        fontSize: 16
+    }
+});
+attri16.addTo(graph);
+
+
+
+
+
+
+
 
 /******************************* Attributes of second entity ***************************************/
 var attri21 = new joint.shapes.standard.Ellipse();
@@ -666,7 +738,7 @@ attri21.attr({
         strokeWidth: 2
     },
     label: {
-        text: arrattri2[0],
+        text: arrattri1[6],
         fill: 'black',
         fontSize: 16
     }
@@ -687,7 +759,7 @@ attri22.attr({
         strokeWidth: 2
     },
     label: {
-        text: arrattri2[1],
+        text: arrattri1[7],
         fill: 'black',
         fontSize: 16
     }
@@ -738,15 +810,28 @@ link4.addTo(graph);
 
 var link5 = new joint.shapes.examples.CustomLink();
 
-link5.source(entity2);
-link5.target(attri21);
+link5.source(entity1);
+link5.target(attri15);
 link5.addTo(graph);
 
 var link6 = new joint.shapes.examples.CustomLink();
 
-link6.source(entity2);
-link6.target(attri22);
+link6.source(entity1);
+link6.target(attri16);
 link6.addTo(graph);
+
+
+var link7 = new joint.shapes.examples.CustomLink();
+
+link7.source(entity2);
+link7.target(attri21);
+link7.addTo(graph);
+
+var link8 = new joint.shapes.examples.CustomLink();
+
+link8.source(entity2);
+link8.target(attri22);
+link8.addTo(graph);
 
 
 
