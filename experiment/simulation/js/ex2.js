@@ -1,109 +1,28 @@
 /*Redeveloped
 Lab: Software Engineering
 Exp:E-R Modeling from the Problem Statements
-File Name: main.js
+File Name: ex2.js
 Author: Prakriti Dhang*/
 
-/* Exercise number choice */
-var ex= document.getElementById("selectex");
-function subex(){
-    if(ex.options[ex.selectedIndex].value==1){
-        document.getElementById("exercise1").style.display="block";
-        document.getElementById("ex1").style.display="block";
-        document.getElementById("exercise2").style.display="none";    
-        document.getElementById("ex2").style.display="none";    
-        document.getElementById("dispres").style.display="block";
-        document.getElementById("show_result1").style.display="none";
-        document.getElementById("show_result2").style.display="none";
-        document.getElementById("dispviewbtn").disabled=false;
-        document.getElementById("viewsol").disabled=true;
-        document.getElementById("ftbl21").reset();
-        document.getElementById("ftbl22").reset();
-        document.getElementById("ftbl23").reset();
-        document.getElementById("ftbl24").reset();
-        document.getElementById("ftbl25").reset();
-       
-    }
-    if(ex.options[ex.selectedIndex].value==2){
-      document.getElementById("exercise2").style.display="block";
-      document.getElementById("ex1").style.display="none";
-      document.getElementById("exercise1").style.display="none";
-      document.getElementById("ex2").style.display="block"; 
-      document.getElementById("dispres").style.display="block";
-      document.getElementById("show_result1").style.display="none";
-      document.getElementById("show_result2").style.display="none";
-      document.getElementById("dispviewbtn").disabled=false;
-      document.getElementById("viewsol").disabled=true;
-      document.getElementById("ftbl1").reset();
-      document.getElementById("ftbl2").reset();
-      document.getElementById("ftbl3").reset();
-      document.getElementById("ftbl4").reset();
-      document.getElementById("ftbl5").reset();
-     
-  }
-    
-    if(ex.options[ex.selectedIndex].value==0){
-        document.getElementById("exercise1").style.display="none";
-        document.getElementById("ex1").style.display="none";
-        document.getElementById("exercise2").style.display="none";
-        document.getElementById("dispres").style.display="none";
-        document.getElementById("show_result1").style.display="none";
-        document.getElementById("show_result2").style.display="none";
-        document.getElementById("dispviewbtn").disabled=true;
-        document.getElementById("viewsol").disabled=true;
-        document.getElementById("ftbl1").reset();
-        document.getElementById("ftbl2").reset();
-        document.getElementById("ftbl3").reset();
-        document.getElementById("ftbl4").reset();
-        document.getElementById("ftbl5").reset();
-        document.getElementById("ftbl21").reset();
-        document.getElementById("ftbl22").reset();
-        document.getElementById("ftbl23").reset();
-        document.getElementById("ftbl24").reset();
-        document.getElementById("ftbl25").reset();
-        
-    }
-}
-/* Submit button to directly view the solution*/
 
-function viewsolutionb(){
-    document.getElementById("viewsol").disabled=false;
-    document.getElementById("dispviewbtn").disabled=true;
-}
-
-function solview(){
-  if(ex.options[ex.selectedIndex].value==1){
-  document.getElementById("dispres").style.display="block";
-  document.getElementById("show_result1").style.display="block";
-  document.getElementById("show_result2").style.display="none";
-  document.getElementById("viewsol").disabled=true;
-}
-if(ex.options[ex.selectedIndex].value==2){
-  document.getElementById("dispres").style.display="block";
-  document.getElementById("show_result2").style.display="block";
-  document.getElementById("show_result1").style.display="none";
-  document.getElementById("viewsol").disabled=true;
-}
-
-}
  
 /*********************************************Function for Table 1 ****************************************/
 
 
-let  inpt1;
-let newtrID, newtdID;
-let  newtd,  newtdw, newtdwn,  newtda, newtda2, newula, newulID ;
-var newtr;
-var checkedvalue;
+let  inpt21;
+let newtrIDt2, newtdIDt2;
+let  newtdt2,  newtdwt2, newtdwnt2,  newtdat2, newtdta2, newulat2, newulIDt2 ;
+var newtrt2;
+var checkedvalue2;
 var myarray = [];
-var arrentity=[];
-var arrrel=[];
-var arrconstrt=[];
-function addbtnt1(){
+var arrentity2=[];
+var arrrel2=[];
+var arrconstrt2=[];
+function addbtnt21(){
 
-inpt1=document.getElementById("inp1").value;
-arrentity.push(inpt1);
-checkedvalue= document.getElementById("chkinp1");
+inpt21=document.getElementById("inp21").value;
+arrentity2.push(inpt21);
+checkedvalue2= document.getElementById("chkinp21");
   
 
 
@@ -114,102 +33,102 @@ checkedvalue= document.getElementById("chkinp1");
   newIconbtn.setAttribute("style","cursor:pointer;");
 
   
-newtrID =  inpt1;
+newtrIDt2 =  inpt21;
   //rbtn.appendChild(newIconbtn);   
-newtr=document.createElement("tr");
-newtr.setAttribute("id",newtrID);
-newtd = document.createElement("td");
-newtd.setAttribute("class","ent");
+newtrt2=document.createElement("tr");
+newtrt2.setAttribute("id",newtrIDt2);
+newtdt2 = document.createElement("td");
+newtdt2.setAttribute("class","ent");
 //newdiv = document.createElement("div");
 //newdiv.setAttribute("class", "form-check");
-newtr.appendChild(newtd);
+newtrt2.appendChild(newtdt2);
 //newtd.appendChild(newdiv);
 
-let liTextNodeact = document.createTextNode(inpt1);
-newtd.appendChild(liTextNodeact);
+let liTextNodeact = document.createTextNode(inpt21);
+newtdt2.appendChild(liTextNodeact);
 //newtd.appendChild(newIconbtn);
 
 /**** Attribute *****/
-newulID =  "attri_" +inpt1;
-newtda = document.createElement("td");
-newula = document.createElement("ul");
-newula.setAttribute("id",newulID);
+newulIDt2 =  "attri_" +inpt21;
+newtdat2 = document.createElement("td");
+newulat2 = document.createElement("ul");
+newulat2.setAttribute("id",newulIDt2);
 
-newtda.appendChild(newula);
-newtr.appendChild(newtda);
+newtdat2.appendChild(newulat2);
+newtrt2.appendChild(newtdat2);
 let liTextNodeacta = document.createTextNode("");
-newula.appendChild(liTextNodeacta);
+newulat2.appendChild(liTextNodeacta);
 
-myarray.push(inpt1);
+myarray.push(inpt21);
 
-  if (inpt1 == "") {
+  if (inpt21 == "") {
     alert("Please Enter Entity Before Clicking Add Button");
 
-  } else if((inpt1 !== "") && (checkedvalue.checked) ){
+  } else if((inpt21 !== "") && (checkedvalue2.checked) ){
 
     
 
     /**** Weak entity ****/
 
-newtdw = document.createElement("td");
-newtdw.setAttribute("class","wentity");
-newtr.appendChild(newtdw);
+newtdwt2 = document.createElement("td");
+newtdwt2.setAttribute("class","wentity");
+newtrt2.appendChild(newtdwt2);
 
 
 let liTextNodeactw = document.createTextNode("Yes");
-newtdw.appendChild(liTextNodeactw);
+newtdwt2.appendChild(liTextNodeactw);
 
 
-  document.getElementById('tbodyt4').appendChild(newtr);
-  document.getElementById('tbodyt4').appendChild(newtr);
- document.getElementById('tbodyt4').appendChild(newtr);
+  document.getElementById('tbodyex2t4').appendChild(newtrt2);
+  document.getElementById('tbodyex2t4').appendChild(newtrt2);
+ document.getElementById('tbodyex2t4').appendChild(newtrt2);
   
 
 
 
 /*Entity = Select option from the dropdown  in table 2*/
 let newOptionID;
-newOptionID = 'newOption_' + inpt1;
+newOptionID = 'newOption_' + inpt21;
   
 let newOption = document.createElement('option');
-let optionText = document.createTextNode(inpt1);
+let optionText = document.createTextNode(inpt21);
 // set option text
 newOption.appendChild(optionText);
 // and option value
 
 newOption.setAttribute("id", newOptionID);
-newOption.setAttribute('value',inpt1);
-let select1 = document.getElementById('selectentity'); 
-select1.appendChild(newOption);
+newOption.setAttribute('value',inpt21);
+let selectt2 = document.getElementById('selectentity2'); 
+selectt2.appendChild(newOption);
 
 /*Entity = Select option from the dropdown  in table 3*/
 let newOptionID2;
-newOptionID2 = 'newOption_' + inpt1;
+newOptionID2 = 'newOption_' + inpt21;
   
 let newOption2 = document.createElement('option');
-let optionText2 = document.createTextNode(inpt1);
+let optionText2 = document.createTextNode(inpt21);
 // set option text
 newOption2.appendChild(optionText2);
 // and option value
 
 newOption2.setAttribute("id", newOptionID2);
-newOption2.setAttribute('value',inpt1);
-let select2 = document.getElementById('selectent31'); 
+newOption2.setAttribute('value',inpt21);
+let select2 = document.getElementById('selectentt31b'); 
 select2.appendChild(newOption2);
 
 
 let newOptionID3;
-newOptionID3 = 'newOption_' + inpt1;
+newOptionID3 = 'newOption_' + inpt21;
   
 let newOption3 = document.createElement('option');
-let optionText3 = document.createTextNode(inpt1);
+let optionText3 = document.createTextNode(inpt21);
 // set option text
 newOption3.appendChild(optionText3);
 // and option value
 
 newOption3.setAttribute("id", newOptionID3);
-newOption3.setAttribute('value',inpt1);
-let select3 = document.getElementById('selectent32'); 
+newOption3.setAttribute('value',inpt21);
+let select3 = document.getElementById('selectentt32b'); 
 select3.appendChild(newOption3);
 
 
@@ -218,69 +137,69 @@ select3.appendChild(newOption3);
 
 
 
-else if((inpt1 !== "") && (checkedvalue.checked == false) ){
+else if((inpt21 !== "") && (checkedvalue2.checked == false) ){
 
 
 
   /**** Not a Weak entity ****/
-  newtdwn = document.createElement("td");
-newtdwn.setAttribute("class","nwentity");
+  newtdwnt2 = document.createElement("td");
+newtdwnt2.setAttribute("class","nwentity");
 //newdivwn = document.createElement("div");
 
-newtr.appendChild(newtdwn);
+newtrt2.appendChild(newtdwnt2);
 
 let liTextNodeactwn = document.createTextNode("No");
-newtdwn.appendChild(liTextNodeactwn);
+newtdwnt2.appendChild(liTextNodeactwn);
 
-  document.getElementById('tbodyt4').appendChild(newtr);
-  document.getElementById('tbodyt4').appendChild(newtr);
-  document.getElementById('tbodyt4').appendChild(newtr);
+  document.getElementById('tbodyex2t4').appendChild(newtrt2);
+  document.getElementById('tbodyex2t4').appendChild(newtrt2);
+  document.getElementById('tbodyex2t4').appendChild(newtrt2);
   
 
 
 /*Entity = Select option from the dropdown  in table 2*/
 let newOptionID;
-newOptionID = 'newOption_' + inpt1;
+newOptionID = 'newOption_' + inpt21;
   
 let newOption = document.createElement('option');
-let optionText = document.createTextNode(inpt1);
+let optionText = document.createTextNode(inpt21);
 // set option text
 newOption.appendChild(optionText);
 // and option value
 
 newOption.setAttribute("id", newOptionID);
-newOption.setAttribute('value',inpt1);
-let select1 = document.getElementById('selectentity'); 
+newOption.setAttribute('value',inpt21);
+let select1 = document.getElementById('selectentity2'); 
 select1.appendChild(newOption);
 
 /*Entity = Select option from the dropdown  in table 3*/
 let newOptionID2;
-newOptionID2 = 'newOption_' + inpt1;
+newOptionID2 = 'newOption_' + inpt21;
   
 let newOption2 = document.createElement('option');
-let optionText2 = document.createTextNode(inpt1);
+let optionText2 = document.createTextNode(inpt21);
 // set option text
 newOption2.appendChild(optionText2);
 // and option value
 
 newOption2.setAttribute("id", newOptionID2);
-newOption2.setAttribute('value',inpt1);
-let select2 = document.getElementById('selectent31'); 
+newOption2.setAttribute('value',inpt21);
+let select2 = document.getElementById('selectentt31b'); 
 select2.appendChild(newOption2);
 
 
 let newOptionID3;
-newOptionID3 = 'newOption_' + inpt1;
+newOptionID3 = 'newOption_' + inpt21;
   
 let newOption3 = document.createElement('option');
-let optionText3 = document.createTextNode(inpt1);
+let optionText3 = document.createTextNode(inpt21);
 // set option text
 newOption3.appendChild(optionText3);
 // and option value
 
 newOption3.setAttribute("id", newOptionID3);
-newOption3.setAttribute('value',inpt1);
-let select3 = document.getElementById('selectent32'); 
+newOption3.setAttribute('value',inpt21);
+let select3 = document.getElementById('selectentt32b'); 
 select3.appendChild(newOption3);
 
 }
@@ -305,7 +224,7 @@ newtda2.appendChild(liTextNodeacta);
   document.getElementById('row2').appendChild(newtdwn);
 }*/
 
-document.getElementById("ftbl1").reset();
+document.getElementById("ftbl21").reset();
 }
 
 
@@ -313,17 +232,17 @@ document.getElementById("ftbl1").reset();
 
 
  /*************************************Function for Table 2***********************************************/  
-let  inpt2;
-var arrattri1=[];
-var arrattri2=[];
- function addbtnt2() {
+let  inpt22;
+var arrattri21=[];
+var arrattri22=[];
+ function addbtnt22() {
     
 
   let   newLi;
-  inpt2=document.getElementById("inp2").value;
-  var selent= document.getElementById("selectentity");
-  var entval =selent.options[selent.selectedIndex].value;
-  var checkedvalueprkey= document.getElementById("chkinp2");
+  inpt22=document.getElementById("inp22").value;
+  var selent2= document.getElementById("selectentity2");
+  var entval2 =selent2.options[selent2.selectedIndex].value;
+  var checkedvalueprkey2= document.getElementById("chkinp22");
   /* var rbtn=document.createElement("button");
   rbtn.setAttribute("id", "removebtnuc");
   rbtn.setAttribute("type", "button");
@@ -341,7 +260,7 @@ var arrattri2=[];
           let Cell20= document.getElementById("tbl4").rows[2].cells;
           var cellval20= Cell20[0].innerHTML;*/
    
-   if(checkedvalueprkey.checked){   
+   if(checkedvalueprkey2.checked){   
   var primary_key="*";
   var para = document.createElement("i");
   let add_prkey = document.createTextNode(primary_key);
@@ -361,20 +280,20 @@ var arrattri2=[];
   newIconbtn.setAttribute("style","cursor:pointer;");
 
 newLi = document.createElement("li");
-let liTextNodeuc = document.createTextNode(inpt2);
+let liTextNodeuc = document.createTextNode(inpt22);
   newLi.appendChild(liTextNodeuc);
   newLi.appendChild(para);
   newLi.appendChild(newIconbtn); 
          // alert(cellval2);
 
-    if (inpt2 == "") {
+    if (inpt22 == "") {
       alert("Please Enter Attribute Before Clicking Add Button");
     } 
     
     else{
-      document.getElementById("attri_"+entval ).appendChild(newLi);
-      var arrattri=arrattri1.push(inpt2);
-      console.log(arrattri);
+      document.getElementById("attri_"+entval2 ).appendChild(newLi);
+      var arrattri2=arrattri21.push(inpt22);
+      console.log(arrattri2);
       /*var arrattri=  document.getElementById("tbl5").rows[1].cells[1].innerText;
     arrattri1.push(arrattri);
     var arrattri22 = document.getElementById("tbl5").rows[2].cells[1].innerText;
@@ -382,7 +301,7 @@ let liTextNodeuc = document.createTextNode(inpt2);
     }
     
 
-  document.getElementById("ftbl2").reset();
+  document.getElementById("ftbl22").reset();
 
 
 
@@ -410,21 +329,21 @@ let liTextNodeuc = document.createTextNode(inpt2);
    
      /*************************************Function for Table 3***********************************************/  
 
-     function addbtnt3(){
-      var objsel1= document.getElementById("selectent31");
-      var dobj1 =objsel1.options[objsel1.selectedIndex].value;
+     function addbtnt23(){
+      var objsel21= document.getElementById("selectentt31b");
+      var dobj21 =objsel21.options[objsel21.selectedIndex].value;
        //alert(dobj1);
-       var inpt3=document.getElementById("inp3").value;
-       arrrel.push(inpt3);
+       var inpt23=document.getElementById("inp23").value;
+       arrrel2.push(inpt23);
        //alert(inpt3);
-       var objsel2= document.getElementById("selectent32");
-       var dobj2 =objsel2.options[objsel2.selectedIndex].value;
+       var objsel22= document.getElementById("selectentt32b");
+       var dobj22 =objsel22.options[objsel22.selectedIndex].value;
        // alert(dobj2);
-        var objselcont= document.getElementById("selectconst");
-        var dobjconst =objselcont.options[objselcont.selectedIndex].text;
-        var dobjconstraint =objselcont.options[objselcont.selectedIndex].value;
+        var objselcont2= document.getElementById("selectconst3b");
+        var dobjconst2 =objselcont2.options[objselcont2.selectedIndex].text;
+        var dobjconstraint2 =objselcont2.options[objselcont2.selectedIndex].value;
         //alert(dobjconst);
-    arrconstrt=dobjconstraint.split(' ');
+    arrconstrt2=dobjconstraint2.split(' ');
   //console.log(arrconstrt);
   var rbtn=document.createElement("button");
   rbtn.setAttribute("id", "removebtn");
@@ -436,26 +355,26 @@ let liTextNodeuc = document.createTextNode(inpt2);
   newIconbtn.setAttribute("class", "bi bi-dash-circle");
        rbtn.appendChild(newIconbtn);   
 
-if(dobj1 == dobj2){
-  alert(dobj1 + "  is not related to  " +dobj2);
+if(dobj21 == dobj22){
+  alert(dobj21 + "  is not related to  " +dobj22);
 }
- else if(inpt3 == ""){
+ else if(inpt23 == ""){
   alert("Relation cannot be blank");
 }
-else if((dobj1 !== dobj2)){
+else if((dobj21 !== dobj22)){
   
   var tr = document.createElement('tr');
   tr.setAttribute("id","t5uc");
-  document.getElementById('tbodytbl5').appendChild(tr);
+  document.getElementById('tbodytbl25').appendChild(tr);
   var td1 = document.createElement('td');
   var td2=document.createElement("td");
   var td3=document.createElement("td");
   var td4=document.createElement("td");
   var td5=document.createElement("td");
-  var tdval1=document.createTextNode(dobj1);
-  var tdval2=document.createTextNode(inpt3);
-  var tdval3=document.createTextNode(dobj2);
-  var tdval4=document.createTextNode(dobjconst);
+  var tdval1=document.createTextNode(dobj21);
+  var tdval2=document.createTextNode(inpt23);
+  var tdval3=document.createTextNode(dobj22);
+  var tdval4=document.createTextNode(dobjconst2);
   
   //var tdval5=document.appendChild(newIconbtn);
  // tbody.appendChild(tr);
@@ -474,7 +393,7 @@ else if((dobj1 !== dobj2)){
   tr.appendChild(td3);
   tr.appendChild(td4);
   tr.appendChild(td5);
-  document.getElementById('tbodytbl5').appendChild(tr);
+  document.getElementById('tbodytbl25').appendChild(tr);
 
 }
 
