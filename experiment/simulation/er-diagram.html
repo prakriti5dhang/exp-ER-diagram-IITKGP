@@ -109,6 +109,8 @@ Author: Prakriti Dhang
     develop a Cab Management System for them. They would be using this software to efficiently manage and track 
     different cabs that are operated by them.
    </p>
+   <p>The agency provides service from 8 AM to 8 PM. The agency can be uniquely identified by regestration number, 
+    and other identification can be name and address.</p>
    <p>
     Cabs are solely owned by the agency. They hire people in contracts to drive the cabs. A cab can be uniquely 
     identified by, like any other vehicle in the country, its license plate. A few different categories of cars 
@@ -118,8 +120,7 @@ Author: Prakriti Dhang
     phone number, date of joining, duration of contract. Also, an unique alphanumeric code is assigned to each number.
   </p>
   <p>
-    The agency provides service from 8 AM to 8 PM. Whenever any passenger books a cab, an available cab is allocated
-     for him. The booking receipt given to the passenger contains the car #, source and destination places. 
+     Whenever any passenger books a cab, an available cab is allocated for him. The booking receipt given to the passenger contains the car #, name, phone, source, destination. 
      Once he reaches the destination, he signs on a duplicate copy of the receipt and gives back to the driver.
       Driver must submit this duplicate copy signed by the passenger at the agency for confirmation.
     </p>
@@ -229,9 +230,9 @@ Author: Prakriti Dhang
      
      <td><select id="selectconst" class="form-select float-center border border-2 border-primary" aria-label="Default select example" >
       <option value="M to M" selected>Many to Many</option>
-      <option value="O to M">One to Many</option>
-      <option value="M to O">Many to One</option>
-      <option value="O to O">One to One</option>
+      <option value="1 to M">One to Many</option>
+      <option value="M to 1">Many to One</option>
+      <option value="1 to 1">One to One</option>
       
     </select></td>
      <td style="text-align: center;"><button id="t3addbtn" class="btn btn-primary" type="button" onclick="addbtnt3()" ><i class="bi bi-plus-lg"></i>Add</button></td>
@@ -419,10 +420,10 @@ Author: Prakriti Dhang
      </select></td>
      
      <td><select id="selectconst3b" class="form-select float-center border border-2 border-primary" aria-label="Default select example" >
-      <option value="mm" selected>Many to Many</option>
-      <option value="om">One to Many</option>
-      <option value="mo">Many to One</option>
-      <option value="oo">One to One</option>
+      <option value="M to M" selected>Many to Many</option>
+      <option value="1 to M">One to Many</option>
+      <option value="M to 1">Many to One</option>
+      <option value="1 to 1">One to One</option>
       
     </select></td>
      <td style="text-align: center;"><button id="t23addbtn" class="btn btn-primary" type="button" onclick="addbtnt23()" ><i class="bi bi-plus-lg"></i>Add</button></td>
