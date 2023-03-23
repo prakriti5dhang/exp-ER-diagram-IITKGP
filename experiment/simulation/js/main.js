@@ -577,7 +577,7 @@ entity2.attr({
 var diamondrel =  new joint.shapes.standard.Rectangle();
 
   diamondrel.position(355,261);
-  diamondrel.resize(60,60);
+  diamondrel.resize(50,50);
   
 diamondrel.attr({
 body:{
@@ -589,7 +589,7 @@ strokeWidth: 2,
 label:{
   text: arrrel[0],
   fill: 'black',
-  fontSize: 16
+  fontSize: 11
 }
  
 });
