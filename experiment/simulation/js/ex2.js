@@ -451,7 +451,7 @@ function drawbtnex22(){
         entity1.resize(100, 40);
         entity1.attr({
             body: {
-                fill: '#ffffff',
+                fill: '#FFFC8C',
                 strokeWidth: 2
             },
             label: {
@@ -472,7 +472,7 @@ entity3.position(160,314);
 entity3.resize(100, 40);
 entity3.attr({
             body: {
-                fill: '#ffffff',
+                fill: '#FFFC8C',
                
                 strokeWidth: 2
             },
@@ -492,7 +492,7 @@ entity2.position(562, 96);
 entity2.resize(100, 40);
 entity2.attr({
             body: {
-                fill: '#ffffff',
+                fill: '#FFFC8C',
                
                 strokeWidth: 2
             },
@@ -509,7 +509,7 @@ entity4.position(561, 287);
 entity4.resize(100, 40);
 entity4.attr({
             body: {
-                fill: '#ffffff',
+                fill: '#FFFC8C',
                
                 strokeWidth: 2
             },
@@ -530,7 +530,7 @@ var diamondrel1 =  new joint.shapes.standard.Rectangle();
   
 diamondrel1.attr({
 body:{
-  fill: '#EEEFED', 
+  fill: '#AEFFEB', 
 strokeWidth: 2, 
 
 
@@ -555,7 +555,7 @@ var diamondrel2 =  new joint.shapes.standard.Rectangle();
   
 diamondrel2.attr({
 body:{
-  fill: '#EEEFED', 
+  fill: '#AEFFEB', 
 strokeWidth: 2, 
 
 
@@ -579,7 +579,7 @@ var diamondrel3 =  new joint.shapes.standard.Rectangle();
   
 diamondrel3.attr({
 body:{
-  fill: '#EEEFED', 
+  fill: '#AEFFEB', 
 strokeWidth: 2, 
 
 
@@ -603,7 +603,7 @@ var diamondrel4 =  new joint.shapes.standard.Rectangle();
   
 diamondrel4.attr({
 body:{
-  fill: '#EEEFED', 
+  fill: '#AEFFEB', 
 strokeWidth: 2, 
 
 
@@ -625,7 +625,7 @@ var diamondrel5 =  new joint.shapes.standard.Rectangle();
   
 diamondrel5.attr({
 body:{
-  fill: '#EEEFED', 
+  fill: '#AEFFEB', 
 strokeWidth: 2, 
 
 
@@ -647,7 +647,7 @@ var diamondrel6=  new joint.shapes.standard.Rectangle();
   
 diamondrel6.attr({
 body:{
-  fill: '#EEEFED', 
+  fill: '#AEFFEB', 
   strokeWidth: 2, 
 
 
@@ -670,7 +670,7 @@ attri11.position(100, 31);
 attri11.resize(100, 40);
 attri11.attr({
     body: {
-        fill: '#EEEFED',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -689,7 +689,7 @@ attri12.position(33, 104);
 attri12.resize(100, 40);
 attri12.attr({
     body: {
-        fill: '#EEEFED',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -708,7 +708,7 @@ attri13.position(71, 190);
 attri13.resize(100, 40);
 attri13.attr({
     body: {
-        fill: '#EEEFED',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -737,7 +737,7 @@ attri21.position(686, 39);
 attri21.resize(100, 40);
 attri21.attr({
     body: {
-        fill: '#EEEFED',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -758,7 +758,7 @@ attri22.position(694, 105);
 attri22.resize(100, 40);
 attri22.attr({
     body: {
-        fill: '#EEEFED',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -777,7 +777,7 @@ attri23.position(676, 164);
 attri23.resize(100, 40);
 attri23.attr({
     body: {
-        fill: '#EEEFED',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -798,7 +798,7 @@ attri31.position(9, 318);
 attri31.resize(100, 40);
 attri31.attr({
     body: {
-        fill: '#EEEFED',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -817,7 +817,7 @@ attri32.position(30, 393);
 attri32.resize(100, 40);
 attri32.attr({
     body: {
-        fill: '#EEEFED',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -836,7 +836,7 @@ attri33.position(100, 435);
 attri33.resize(100, 40);
 attri33.attr({
     body: {
-        fill: '#EEEFED',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -858,7 +858,7 @@ attri41.position(692, 259);
 attri41.resize(100, 40);
 attri41.attr({
     body: {
-        fill: '#EEEFED',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -877,7 +877,7 @@ attri42.position(678, 350);
 attri42.resize(100, 40);
 attri42.attr({
     body: {
-        fill: '#EEEFED',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -896,7 +896,7 @@ attri43.position(649, 413);
 attri43.resize(100, 40);
 attri43.attr({
     body: {
-        fill: '#EEEFED',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -915,7 +915,7 @@ attri44.position(540, 430);
 attri44.resize(100, 40);
 attri44.attr({
     body: {
-        fill: '#EEEFED',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -934,7 +934,7 @@ attri45.position(466, 384);
 attri45.resize(100, 40);
 attri45.attr({
     body: {
-        fill: '#EEEFED',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2

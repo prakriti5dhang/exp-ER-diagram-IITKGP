@@ -543,7 +543,7 @@ function drawbtnex21(){
         entity1.resize(100, 40);
         entity1.attr({
             body: {
-                fill: '#ffffff',
+                fill: '#FFFC8C',
                 strokeWidth: 2
             },
             label: {
@@ -560,7 +560,7 @@ entity2.position(499, 271);
 entity2.resize(100, 40);
 entity2.attr({
             body: {
-                fill: '#ffffff',
+                fill: '#FFFC8C',
                
                 strokeWidth: 2
             },
@@ -581,7 +581,7 @@ var diamondrel =  new joint.shapes.standard.Rectangle();
   
 diamondrel.attr({
 body:{
-  fill: '#ffffff', 
+  fill: '#AEFFEB', 
 strokeWidth: 2, 
 
 
@@ -604,7 +604,7 @@ attri11.position(215, 163);
 attri11.resize(100, 40);
 attri11.attr({
     body: {
-        fill: '#ffffff',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -623,7 +623,7 @@ attri12.position(55, 183);
 attri12.resize(100, 40);
 attri12.attr({
     body: {
-        fill: '#ffffff',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -642,7 +642,7 @@ attri13.position(8, 271);
 attri13.resize(100, 40);
 attri13.attr({
     body: {
-        fill: '#ffffff',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -661,7 +661,7 @@ attri14.position(13, 336);
 attri14.resize(100, 40);
 attri14.attr({
     body: {
-        fill: '#ffffff',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -680,7 +680,7 @@ attri15.position(63, 394);
 attri15.resize(100, 40);
 attri15.attr({
     body: {
-        fill: '#ffffff',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -699,7 +699,7 @@ attri16.position(179, 398);
 attri16.resize(100, 40);
 attri16.attr({
     body: {
-        fill: '#ffffff',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -726,7 +726,7 @@ attri21.position(578, 173);
 attri21.resize(100, 40);
 attri21.attr({
     body: {
-        fill: '#ffffff',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
@@ -747,7 +747,7 @@ attri22.position(574, 371);
 attri22.resize(100, 40);
 attri22.attr({
     body: {
-        fill: '#ffffff',
+        fill: '#C2FF8C',
         rx: 20,
         ry: 20,
         strokeWidth: 2
