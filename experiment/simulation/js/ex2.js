@@ -309,7 +309,8 @@ let liTextNodeuc = document.createTextNode(inpt22);
 
    
      /*************************************Function for Table 3***********************************************/  
-
+     var constarr=[];
+     var consrting;
      function addbtnt23(){
       var objsel21= document.getElementById("selectentt31b");
       var dobj21 =objsel21.options[objsel21.selectedIndex].value;
@@ -323,12 +324,15 @@ let liTextNodeuc = document.createTextNode(inpt22);
         var objselcont2= document.getElementById("selectconst3b");
         var dobjconst2 =objselcont2.options[objselcont2.selectedIndex].text;
         var dobjconstraint2 =objselcont2.options[objselcont2.selectedIndex].value;
-        //alert(dobjconst);
-        arrconstrt2=dobjconstraint2.split(' ');
-        //var constarr=[];
-       //var constraintd=arrconstrt2.push(dobjconstraint2);
-       //console.log(constraintd);
-  
+        //console.log(dobjconstraint2);
+        
+   
+      
+       constarr.push(dobjconstraint2);
+        //console.log(constarr);
+        
+        consrting= constarr.toString();
+      
   var rbtn=document.createElement("button");
   rbtn.setAttribute("id", "removebtn");
   rbtn.setAttribute("type", "button");
@@ -418,7 +422,8 @@ if (typeof(btndel) == "object") {
 
 
 function drawbtnex22(){
-
+  arrconstrt2=consrting.split(/[ ,]+/);
+ // console.log(arrconstrt2);
   var namespace = joint.shapes;
 
         var graph = new joint.dia.Graph({}, { cellNamespace: namespace });
@@ -1077,7 +1082,7 @@ linkr2.addTo(graph);
         linkr2.appendLabel({
           attrs: {
               text: {
-                  text: arrconstrt2[1],
+                  text: arrconstrt2[2],
                   fontSize: 16
               }
               
@@ -1095,7 +1100,7 @@ linkr3.addTo(graph);
         linkr3.appendLabel({
           attrs: {
               text: {
-                  text: arrconstrt2[2],
+                  text: arrconstrt2[3],
                   fontSize: 16
               }
               
@@ -1111,7 +1116,7 @@ linkr4.addTo(graph);
         linkr4.appendLabel({
           attrs: {
               text: {
-                  text: arrconstrt2[3],
+                  text: arrconstrt2[5],
                   fontSize: 16
               }
               
@@ -1129,7 +1134,7 @@ linkr5.addTo(graph);
         linkr5.appendLabel({
           attrs: {
               text: {
-                  text: arrconstrt2[4],
+                  text: arrconstrt2[6],
                   fontSize: 16
               }
               
@@ -1146,7 +1151,7 @@ linkr6.addTo(graph);
         linkr6.appendLabel({
           attrs: {
               text: {
-                  text: arrconstrt2[2],
+                  text: arrconstrt2[8],
                   fontSize: 16
               }
               
@@ -1163,7 +1168,7 @@ linkr7.addTo(graph);
         linkr7.appendLabel({
           attrs: {
               text: {
-                  text: arrconstrt2[0],
+                  text: arrconstrt2[9],
                   fontSize: 16
               }
               
@@ -1180,7 +1185,7 @@ linkr8.addTo(graph);
         linkr8.appendLabel({
           attrs: {
               text: {
-                  text: arrconstrt2[2],
+                  text: arrconstrt2[11],
                   fontSize: 16
               }
               
@@ -1196,7 +1201,7 @@ linkr9.addTo(graph);
         linkr9.appendLabel({
           attrs: {
               text: {
-                  text: arrconstrt2[0],
+                  text: arrconstrt2[12],
                   fontSize: 16
               }
               
@@ -1213,7 +1218,7 @@ linkr10.addTo(graph);
         linkr10.appendLabel({
           attrs: {
               text: {
-                  text: arrconstrt2[2],
+                  text: arrconstrt2[14],
                   fontSize: 16
               }
               
@@ -1230,7 +1235,7 @@ linkr11.addTo(graph);
         linkr11.appendLabel({
           attrs: {
               text: {
-                  text: arrconstrt2[0],
+                  text: arrconstrt2[15],
                   fontSize: 16
               }
               
@@ -1247,7 +1252,7 @@ linkr12.addTo(graph);
         linkr12.appendLabel({
           attrs: {
               text: {
-                  text: arrconstrt2[2],
+                  text: arrconstrt2[17],
                   fontSize: 16
               }
               
