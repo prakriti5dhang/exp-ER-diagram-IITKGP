@@ -723,7 +723,7 @@ attri16.addTo(graph);
 var attri21 = new joint.shapes.standard.Ellipse();
 attri21.position(578, 173);
 
-attri21.resize(100, 40);
+attri21.resize(125, 40);
 attri21.attr({
     body: {
         fill: '#D4FFA6',
@@ -744,7 +744,7 @@ attri21.addTo(graph);
 var attri22 = new joint.shapes.standard.Ellipse();
 attri22.position(574, 371);
 
-attri22.resize(100, 40);
+attri22.resize(125, 40);
 attri22.attr({
     body: {
         fill: '#D4FFA6',
