@@ -734,7 +734,7 @@ attri13.addTo(graph);
 var attri21 = new joint.shapes.standard.Ellipse();
 attri21.position(542, 15);
 
-attri21.resize(100, 50);
+attri21.resize(130, 50);
 attri21.attr({
     body: {
         fill: '#D4FFA6',
@@ -755,7 +755,7 @@ attri21.addTo(graph);
 var attri22 = new joint.shapes.standard.Ellipse();
 attri22.position(651, 11);
 
-attri22.resize(100, 40);
+attri22.resize(130, 40);
 attri22.attr({
     body: {
         fill: '#D4FFA6',
@@ -774,7 +774,7 @@ attri22.addTo(graph);
 var attri23 = new joint.shapes.standard.Ellipse();
 attri23.position(694, 56);
 
-attri23.resize(100, 40);
+attri23.resize(130, 40);
 attri23.attr({
     body: {
         fill: '#D4FFA6',
@@ -793,7 +793,7 @@ attri23.addTo(graph);
 var attri24 = new joint.shapes.standard.Ellipse();
 attri24.position(697, 157);
 
-attri24.resize(100, 40);
+attri24.resize(130, 40);
 attri24.attr({
     body: {
         fill: '#D4FFA6',
@@ -812,7 +812,7 @@ attri24.addTo(graph);
 var attri25 = new joint.shapes.standard.Ellipse();
 attri25.position(642, 202);
 
-attri25.resize(100, 40);
+attri25.resize(130, 40);
 attri25.attr({
     body: {
         fill: '#D4FFA6',
@@ -831,7 +831,7 @@ attri25.addTo(graph);
 var attri26 = new joint.shapes.standard.Ellipse();
 attri26.position(697, 105);
 
-attri26.resize(100, 40);
+attri26.resize(130, 40);
 attri26.attr({
     body: {
         fill: '#D4FFA6',

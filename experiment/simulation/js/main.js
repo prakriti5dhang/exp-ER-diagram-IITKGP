@@ -69,6 +69,7 @@ function subex(){
 function viewsolutionb(){
     document.getElementById("viewsol").disabled=false;
     document.getElementById("dispviewbtn").disabled=true;
+    window.scrollBy(0, 1800);
 }
 
 function solview(){
@@ -601,7 +602,7 @@ diamondrel.addTo(graph);
 var attri11 = new joint.shapes.standard.Ellipse();
 attri11.position(215, 163);
 
-attri11.resize(100, 40);
+attri11.resize(120, 40);
 attri11.attr({
     body: {
         fill: '#D4FFA6',
@@ -744,7 +745,7 @@ attri21.addTo(graph);
 var attri22 = new joint.shapes.standard.Ellipse();
 attri22.position(574, 371);
 
-attri22.resize(125, 40);
+attri22.resize(130, 40);
 attri22.attr({
     body: {
         fill: '#D4FFA6',
