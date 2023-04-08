@@ -376,6 +376,7 @@ let liTextNodeuc = document.createTextNode(inpt2);
       document.getElementById("attri_"+entval ).appendChild(newLi);
       var arrattri=arrattri1.push(inpt2);
       console.log(arrattri);
+      document.getElementById("inp2").value="";
       /*var arrattri=  document.getElementById("tbl5").rows[1].cells[1].innerText;
     arrattri1.push(arrattri);
     var arrattri22 = document.getElementById("tbl5").rows[2].cells[1].innerText;
@@ -383,7 +384,7 @@ let liTextNodeuc = document.createTextNode(inpt2);
     }
     
 
-  document.getElementById("ftbl2").reset();
+  //document.getElementById("ftbl2").reset();
 
 
 
