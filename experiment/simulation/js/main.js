@@ -16,6 +16,7 @@ function subex(){
         document.getElementById("dispres").style.display="block";
         document.getElementById("show_result1").style.display="none";
         document.getElementById("show_result2").style.display="none";
+        document.getElementById('dispuml2').style.display="none";
         document.getElementById("dispviewbtn").disabled=false;
         document.getElementById("viewsol").disabled=true;
         document.getElementById("ftbl21").reset();
@@ -34,6 +35,7 @@ function subex(){
       document.getElementById("para1").style.display="block";
       document.getElementById("show_result1").style.display="none";
       document.getElementById("show_result2").style.display="none";
+      document.getElementById('dispuml1').style.display="none";
       document.getElementById("dispviewbtn").disabled=false;
       document.getElementById("viewsol").disabled=true;
       document.getElementById("ftbl1").reset();
@@ -520,6 +522,7 @@ if (typeof(btndel) == "object") {
 
 
 function drawbtnex21(){
+  document.getElementById('dispuml1').style.display="block";
 
   var namespace = joint.shapes;
 

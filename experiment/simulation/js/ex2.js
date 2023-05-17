@@ -425,6 +425,7 @@ if (typeof(btndel) == "object") {
 function drawbtnex22(){
   arrconstrt2=consrting.split(/[ ,]+/);
  // console.log(arrconstrt2);
+ document.getElementById('dispuml2').style.display="block";
   var namespace = joint.shapes;
 
         var graph = new joint.dia.Graph({}, { cellNamespace: namespace });
