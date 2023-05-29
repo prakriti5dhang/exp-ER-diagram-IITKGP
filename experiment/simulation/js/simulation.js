@@ -16,7 +16,7 @@ function playsimulation(){
     document.getElementById("s1").style.display="block";
     document.getElementById("nextbtn").style.display="block";
     document.getElementById("nextbtn").disabled=true;
-    document.getElementById("prebtn").disabled=true;
+    //document.getElementById("prebtn").disabled=true;
     document.getElementById("stp1").disabled=false;
 
     setTimeout(s12, 1000);
@@ -63,7 +63,7 @@ function gonext(){ // Para 2
  function stp1c(){
     document.getElementById("s1c").style.display="block";
     document.getElementById("nextbtn1").disabled=false;
-    document.getElementById("prebtn1").disabled=false;
+    //document.getElementById("prebtn1").disabled=false;
     
  }
 }
@@ -87,7 +87,7 @@ function stp1e(){
 function stp1f(){
 document.getElementById("s1f").style.display="block";
 document.getElementById("nextbtn2").disabled=false;
-document.getElementById("prebtn2").disabled=false;
+//document.getElementById("prebtn2").disabled=false;
 
 
 }
@@ -112,7 +112,7 @@ function stp1h(){
 function stp1i(){
 document.getElementById("s1i").style.display="block";
 document.getElementById("nextbtn3").disabled=false;
-document.getElementById("prebtn3").disabled=false;
+//document.getElementById("prebtn3").disabled=false;
 
 
 }
@@ -145,7 +145,7 @@ setTimeout(stp1m, 1000);
 function stp1m(){
     document.getElementById("s1m").style.display="block";
     document.getElementById("nextbtn4").disabled=false;
-    document.getElementById("prebtn4").disabled=false;
+    //document.getElementById("prebtn4").disabled=false;
 
     
 
@@ -185,7 +185,7 @@ function gonextstep2(){ //para 6
        
         
         document.getElementById("nextbtn5").disabled=false;
-        document.getElementById("prebtn5").disabled=false;
+        //document.getElementById("prebtn5").disabled=false;
     }
      
 }
@@ -221,7 +221,7 @@ function gonext2a(){
        
         
         document.getElementById("nextbtn6").disabled=false;
-        document.getElementById("prebtn6").disabled=false;
+        //document.getElementById("prebtn6").disabled=false;
 }
 
 }
@@ -254,7 +254,7 @@ function gonext2b(){
        
         
         document.getElementById("nextbtn7").disabled=false;
-        document.getElementById("prebtn7").disabled=false;
+        //document.getElementById("prebtn7").disabled=false;
 }
 
 }
@@ -288,7 +288,7 @@ function gonext2c(){
        
         
         document.getElementById("nextbtn8").disabled=false;
-        document.getElementById("prebtn8").disabled=false;
+       // document.getElementById("prebtn8").disabled=false;
 }
 
 }
@@ -362,7 +362,7 @@ function gonextstep3(){
        
         
         document.getElementById("nextbtn9").disabled=false;
-        document.getElementById("prebtn9").disabled=false;
+       // document.getElementById("prebtn9").disabled=false;
 }
 
 }
@@ -400,7 +400,7 @@ function gonextstep4(){
        
         
         document.getElementById("nextbtn10").disabled=false;
-        document.getElementById("prebtn10").disabled=false;
+       // document.getElementById("prebtn10").disabled=false;
 }
 
 }
@@ -440,7 +440,7 @@ function gonextstep5(){
        
         
         document.getElementById("nextbtn11").disabled=false;
-        document.getElementById("prebtn11").disabled=false;
+      //  document.getElementById("prebtn11").disabled=false;
 }
 
 }
@@ -480,7 +480,7 @@ function gonext5a(){
        
         
         document.getElementById("nextbtn12").disabled=false;
-        document.getElementById("prebtn12").disabled=false;
+       // document.getElementById("prebtn12").disabled=false;
 }
 
 }
@@ -520,7 +520,7 @@ function gonext5b(){
        
         
         document.getElementById("nextbtn13").disabled=false;
-        document.getElementById("prebtn13").disabled=false;
+       // document.getElementById("prebtn13").disabled=false;
 }
 
 }
@@ -557,7 +557,7 @@ function gonext5c(){
 
     function nexter10(){
        
-        document.getElementById("prebtn14").disabled=false;
+      //  document.getElementById("prebtn14").disabled=false;
         document.getElementById("replaybtn").style.display="block";
         document.getElementById("replaybtn").disabled=false;
 }
@@ -565,7 +565,7 @@ function gonext5c(){
 }
 
 
-
+/*
 
 function goback1(){
    
@@ -942,9 +942,10 @@ function goback14(){
     document.getElementById("p13").style.display="none";
     document.getElementById("p14").style.display="block";
     document.getElementById("p15").style.display="none";
-}
+}*/
 
 /* start from step 1 */
+
 function gostep1(){
    
     
@@ -967,7 +968,7 @@ function gostep1(){
 /* start  from step2 */
 function gostep2(){
     
-    document.getElementById("p1").style.display="none";
+    document.getElementById("p11").style.display="none";
     document.getElementById("p2").style.display="none";
     document.getElementById("p3").style.display="none";
     document.getElementById("p4").style.display="none";
@@ -987,7 +988,7 @@ function gostep2(){
 /* start  from step3 */
 function gostep3(){
    
-    document.getElementById("p1").style.display="none";
+    document.getElementById("p11").style.display="none";
     document.getElementById("p2").style.display="none";
     document.getElementById("p3").style.display="none";
     document.getElementById("p4").style.display="none";
@@ -1006,7 +1007,7 @@ function gostep3(){
 
 /* start  from step4 */
 function gostep4(){
-    document.getElementById("p1").style.display="none";
+    document.getElementById("p11").style.display="none";
     document.getElementById("p2").style.display="none";
     document.getElementById("p3").style.display="none";
     document.getElementById("p4").style.display="none";
@@ -1024,7 +1025,7 @@ function gostep4(){
 }
 /* start  from step5 */
 function gostep5(){
-    document.getElementById("p1").style.display="none";
+    document.getElementById("p11").style.display="none";
     document.getElementById("p2").style.display="none";
     document.getElementById("p3").style.display="none";
     document.getElementById("p4").style.display="none";
