@@ -509,7 +509,12 @@ function removerowuc(btndel) {
 
 if (typeof(btndel) == "object") {
 
-    $(btndel).closest("li").remove();
+  var listItemValue = $(btndel).closest("li").data("value");
+  //console.log(listItemValue);
+  $(btndel).closest("li").remove();
+  //$("#selectactuc1").find('option[value="' + listItemValue + '"]').remove();
+  //$("#selectactuc2").find('option[value="' + listItemValue + '"]').remove();
+
    
    // x.remove(typeof(btndel));
    
