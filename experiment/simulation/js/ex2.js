@@ -64,7 +64,31 @@ myarray.push(inpt21);
   if (inpt21 == "") {
     alert("Please Enter Entity Before Clicking Add Button");
 
-  } else if((inpt21 !== "") && (checkedvalue2.checked) ){
+  } 
+  
+  
+  const tblt4ex2= document.getElementById('tbodyex2t4');
+  const tableRows = tblt4ex2.getElementsByTagName("tr");
+  let areInserted = false;
+
+for (let i = 0; i < tableRows.length; i++) {
+  const cells = tableRows[i].getElementsByTagName("td");
+  const value1 = cells[0].textContent;
+  if ((cells[0].innerHTML== inpt21) && (cells[2].innerHTML== "Yes")) {
+    areInserted = true;
+    break;
+  }
+  if ((cells[0].innerHTML== inpt21) && (cells[2].innerHTML== "No")) {
+    areInserted = true;
+    break;
+  }
+}
+
+   if (areInserted) {
+  alert("Value is already inserted in the table.");
+} else {
+  
+  if((inpt21 !== "") && (checkedvalue2.checked) ){
 
     
 
@@ -137,7 +161,7 @@ select3.appendChild(newOption3);
 
 
 
-else if((inpt21 !== "") && (checkedvalue2.checked == false) ){
+ if((inpt21 !== "") && (checkedvalue2.checked == false) ){
 
 
 
@@ -205,7 +229,7 @@ select3.appendChild(newOption3);
 }
 
 
-
+}
 
   
 

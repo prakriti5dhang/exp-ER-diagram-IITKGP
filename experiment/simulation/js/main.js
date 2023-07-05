@@ -152,10 +152,33 @@ myarray.push(inpt1);
   if (inpt1 == "") {
     alert("Please Enter Entity Before Clicking Add Button");
 
-  } else if((inpt1 !== "") && (checkedvalue.checked) ){
+  } 
+  
+  const tblt4= document.getElementById('tbodyt4');
+  const tableRows = tblt4.getElementsByTagName("tr");
+  let areInserted = false;
 
+for (let i = 0; i < tableRows.length; i++) {
+  const cells = tableRows[i].getElementsByTagName("td");
+  const value1 = cells[0].textContent;
+  if ((cells[0].innerHTML== inpt1) && (cells[2].innerHTML== "Yes")) {
+    areInserted = true;
+    break;
+  }
+  if ((cells[0].innerHTML== inpt1) && (cells[2].innerHTML== "No")) {
+    areInserted = true;
+    break;
+  }
+}
+
+   if (areInserted) {
+  alert("Value is already inserted in the table.");
+} else {
+  
+   if((inpt1 !== "") && (checkedvalue.checked) ){
+
+   
     
-
     /**** Weak entity ****/
 
 newtdw = document.createElement("td");
@@ -219,16 +242,15 @@ newOption3.setAttribute('value',inpt1);
 let select3 = document.getElementById('selectent32'); 
 select3.appendChild(newOption3);
 
-
+  
 }
 
 
 
 
-else if((inpt1 !== "") && (checkedvalue.checked == false) ){
+ else if((inpt1 !== "") && (checkedvalue.checked == false) ){
 
-
-
+  
   /**** Not a Weak entity ****/
   newtdwn = document.createElement("td");
 newtdwn.setAttribute("class","nwentity");
@@ -290,13 +312,13 @@ newOption3.setAttribute('value',inpt1);
 let select3 = document.getElementById('selectent32'); 
 select3.appendChild(newOption3);
 
+
+
+
+
 }
-
-
-
-
   
-
+  }
 
 
 //else if((inpt1 !== inpt1 ) && (checkedvalue.checked == false)){
@@ -313,6 +335,10 @@ newtda2.appendChild(liTextNodeacta);
 }*/
 
 document.getElementById("ftbl1").reset();
+
+
+
+
 }
 
 
