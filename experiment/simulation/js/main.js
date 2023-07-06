@@ -109,7 +109,7 @@ var arrconstrt = [];
 function addbtnt1() {
 
   inpt1 = document.getElementById("inp1").value;
-  arrentity.push(inpt1);
+  
   checkedvalue = document.getElementById("chkinp1");
 
 
@@ -147,7 +147,7 @@ function addbtnt1() {
   let liTextNodeacta = document.createTextNode("");
   newula.appendChild(liTextNodeacta);
 
-  myarray.push(inpt1);
+  //myarray.push(inpt1);
 
   if (inpt1 == "") {
     alert("Please Enter Entity Before Clicking Add Button");
@@ -171,7 +171,7 @@ function addbtnt1() {
   if (areInserted) {
     alert("Value is already inserted in the table.");
   } else {
-
+    arrentity.push(inpt1);
     if ((inpt1 !== "") && (checkedvalue.checked)) {
 
 
@@ -347,8 +347,9 @@ var inpt2;
 var arrattri1 = [];
 var arrattri2 = [];
 var arrattri = [];
-var arrattrii = [];
+var arrattrii2 = [];
 var entval;
+
 function addbtnt2() {
 
 
@@ -390,10 +391,11 @@ function addbtnt2() {
 
   var newIconbtn = document.createElement("img");
   newIconbtn.setAttribute("src", "./images/remove.png");
-  newIconbtn.setAttribute("onclick", "removerowuc(this)");
+  newIconbtn.setAttribute("onclick", "removerowa(this)");
   newIconbtn.setAttribute("style", "cursor:pointer;");
 
   newLi = document.createElement("li");
+  newLi.setAttribute("data-value", inpt2);
   let liTextNodeuc = document.createTextNode(inpt2);
   newLi.appendChild(liTextNodeuc);
   newLi.appendChild(para);
@@ -452,10 +454,10 @@ function addbtnt2() {
         arrattri.push(rowValues);
         
         if (listItems.length != 6) {
-          document.getElementById('drawbtn').disabled = true;
+          //document.getElementById('drawbtn').disabled = true;
         }
         else {
-          document.getElementById('drawbtn').disabled = false;
+          //document.getElementById('drawbtn').disabled = false;
         }
 
         
@@ -465,10 +467,10 @@ function addbtnt2() {
         arrattrii.push(rowValues);
 
         if (listItems.length != 2) {
-          document.getElementById('drawbtn').disabled = true;
+        //  document.getElementById('drawbtn').disabled = true;
         }
         else {
-          document.getElementById('drawbtn').disabled = false;
+         // document.getElementById('drawbtn').disabled = false;
         }
       }
 
@@ -482,10 +484,12 @@ function addbtnt2() {
   var mergedArray2 = [].concat.apply([], arrattrii);
   arrattri2 = [...new Set(mergedArray2)]; //removes duplicates
   console.log(arrattri2);
+     
+ 
 }
 
 
-// table row 1
+
 
 
 
@@ -561,7 +565,7 @@ function addbtnt3() {
   }
 
 
-
+  
 
 }
 
@@ -580,25 +584,32 @@ function removerow(btndel) {
 }
 
 
-function removerowuc(btndel) {
+function removerowa(btndel) {
 
   if (typeof (btndel) == "object") {
 
     var listItemValue = $(btndel).closest("li").data("value");
-    //console.log(listItemValue);
+    console.log(listItemValue);
     $(btndel).closest("li").remove();
     //$("#selectactuc1").find('option[value="' + listItemValue + '"]').remove();
     //$("#selectactuc2").find('option[value="' + listItemValue + '"]').remove();
-  }
 
-  // x.remove(typeof(btndel));
   /* Remove item from array */
-  /*var index = arrattri1.indexOf(listItemValue);
+  var index = arrattri1.indexOf(listItemValue);
+  var index2 = arrattri2.indexOf(listItemValue);
          if (index !== -1) {
-           arrattri1.splice(index, 1);
+          arrattri1.splice(index, 1);
+       
+         }
+         if (index2 !== -1) {
+         
+          arrattri2.splice(index2, 1);
          }
          console.log(arrattri1);
-     }*/
+         console.log(arrattri2);
+  }
+
+  
   else {
     return false;
   }
