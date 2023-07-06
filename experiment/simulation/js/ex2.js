@@ -602,7 +602,7 @@ function drawbtnex22() {
 
 
 
-  /********************************* Entity 3 ***************************************/
+  /********************************* Entity 3  Cab***************************************/
   var entity3 = new joint.shapes.standard.Rectangle();
   entity3.position(160, 314);
   entity3.resize(100, 40);
@@ -622,9 +622,9 @@ function drawbtnex22() {
 
 
 
-  /********************************* Entity 2 ***************************************/
+  /********************************* Entity 2  Driver ***************************************/
   var entity2 = new joint.shapes.standard.Rectangle();
-  entity2.position(562, 96);
+  entity2.position(521, 95);
   entity2.resize(100, 40);
   entity2.attr({
     body: {
@@ -639,7 +639,7 @@ function drawbtnex22() {
     }
   });
   entity2.addTo(graph);
-  /********************************* Entity 4 ***************************************/
+  /********************************* Entity 4  Passenger***************************************/
   var entity4 = new joint.shapes.standard.Rectangle();
   entity4.position(510, 382);
   entity4.resize(100, 40);
@@ -659,7 +659,7 @@ function drawbtnex22() {
 
   /******************************************* Relation **********************************************/
 
-  var diamondrel1 = new joint.shapes.standard.Rectangle();
+  var diamondrel1 = new joint.shapes.standard.Rectangle(); //agency -driver
 
   diamondrel1.position(374, 106);
   diamondrel1.resize(50, 50);
@@ -684,7 +684,7 @@ function drawbtnex22() {
 
 
 
-  var diamondrel2 = new joint.shapes.standard.Rectangle();
+  var diamondrel2 = new joint.shapes.standard.Rectangle(); //agency -driver
 
   diamondrel2.position(401, 22);
   diamondrel2.resize(50, 50);
@@ -708,7 +708,7 @@ function drawbtnex22() {
 
 
 
-  var diamondrel3 = new joint.shapes.standard.Rectangle();
+  var diamondrel3 = new joint.shapes.standard.Rectangle();//agency -cab
 
   diamondrel3.position(198, 200);
   diamondrel3.resize(50, 50);
@@ -732,7 +732,7 @@ function drawbtnex22() {
 
 
 
-  var diamondrel4 = new joint.shapes.standard.Rectangle();
+  var diamondrel4 = new joint.shapes.standard.Rectangle(); //cab -passenger
 
   diamondrel4.position(364, 334);
   diamondrel4.resize(50, 50);
@@ -754,7 +754,7 @@ function drawbtnex22() {
   diamondrel4.rotate(40);
   diamondrel4.addTo(graph);
 
-  var diamondrel5 = new joint.shapes.standard.Rectangle();
+  var diamondrel5 = new joint.shapes.standard.Rectangle(); ////passenger -driver
 
   diamondrel5.position(557, 245);
   diamondrel5.resize(50, 50);
@@ -776,7 +776,7 @@ function drawbtnex22() {
   diamondrel5.rotate(40);
   diamondrel5.addTo(graph);
 
-  var diamondrel6 = new joint.shapes.standard.Rectangle();
+  var diamondrel6 = new joint.shapes.standard.Rectangle(); //cab -driver
 
   diamondrel6.position(396, 205);
   diamondrel6.resize(50, 50);
@@ -797,10 +797,10 @@ function drawbtnex22() {
   });
   diamondrel6.rotate(40);
   diamondrel6.addTo(graph);
-  /*************************** Attributes of first entity *************************************/
+  /*************************** Attributes of first entity agency *************************************/
 
 
-  var attri11 = new joint.shapes.standard.Ellipse();
+  var attri11 = new joint.shapes.standard.Ellipse(); 
   attri11.position(100, 31);
 
   attri11.resize(100, 40);
@@ -866,9 +866,9 @@ function drawbtnex22() {
 
 
 
-  /******************************* Attributes of second entity ***************************************/
+  /******************************* Attributes of second entity  driver ***************************************/
   var attri21 = new joint.shapes.standard.Ellipse();
-  attri21.position(542, 15);
+  attri21.position(494, 12);
 
   attri21.resize(130, 50);
   attri21.attr({
@@ -879,7 +879,7 @@ function drawbtnex22() {
       strokeWidth: 2
     },
     label: {
-      text: arrattri21[6],
+      text: arrattri22[0],
       fill: 'black',
       fontSize: 16
     }
@@ -889,7 +889,7 @@ function drawbtnex22() {
 
 
   var attri22 = new joint.shapes.standard.Ellipse();
-  attri22.position(651, 11);
+  attri22.position(628, 6);
 
   attri22.resize(130, 40);
   attri22.attr({
@@ -900,7 +900,7 @@ function drawbtnex22() {
       strokeWidth: 2
     },
     label: {
-      text: arrattri21[7],
+      text: arrattri22[1],
       fill: 'black',
       fontSize: 16
     }
@@ -908,7 +908,7 @@ function drawbtnex22() {
   attri22.addTo(graph);
 
   var attri23 = new joint.shapes.standard.Ellipse();
-  attri23.position(694, 56);
+  attri23.position(663, 56);
 
   attri23.resize(130, 40);
   attri23.attr({
@@ -919,7 +919,7 @@ function drawbtnex22() {
       strokeWidth: 2
     },
     label: {
-      text: arrattri21[8],
+      text: arrattri22[2],
       fill: 'black',
       fontSize: 16
     }
@@ -927,7 +927,7 @@ function drawbtnex22() {
   attri23.addTo(graph);
 
   var attri24 = new joint.shapes.standard.Ellipse();
-  attri24.position(697, 157);
+  attri24.position(66, 152);
 
   attri24.resize(130, 40);
   attri24.attr({
@@ -938,7 +938,7 @@ function drawbtnex22() {
       strokeWidth: 2
     },
     label: {
-      text: arrattri21[9],
+      text: arrattri22[3],
       fill: 'black',
       fontSize: 16
     }
@@ -946,7 +946,7 @@ function drawbtnex22() {
   attri24.addTo(graph);
 
   var attri25 = new joint.shapes.standard.Ellipse();
-  attri25.position(642, 202);
+  attri25.position(608, 199);
 
   attri25.resize(130, 40);
   attri25.attr({
@@ -957,7 +957,7 @@ function drawbtnex22() {
       strokeWidth: 2
     },
     label: {
-      text: arrattri21[10],
+      text: arrattri22[4],
       fill: 'black',
       fontSize: 16
     }
@@ -976,14 +976,14 @@ function drawbtnex22() {
       strokeWidth: 2
     },
     label: {
-      text: arrattri21[11],
+      text: arrattri22[5],
       fill: 'black',
       fontSize: 16
     }
   });
   attri26.addTo(graph);
 
-  /************************************* Attribute for third entity ***************************************/
+  /************************************* Attribute for third entity cab ***************************************/
 
   var attri31 = new joint.shapes.standard.Ellipse();
   attri31.position(9, 318);
@@ -997,7 +997,7 @@ function drawbtnex22() {
       strokeWidth: 2
     },
     label: {
-      text: arrattri21[3],
+      text: arrattri23[0],
       fill: 'black',
       fontSize: 16
     }
@@ -1016,7 +1016,7 @@ function drawbtnex22() {
       strokeWidth: 2
     },
     label: {
-      text: arrattri21[4],
+      text: arrattri23[1],
       fill: 'black',
       fontSize: 16
     }
@@ -1035,7 +1035,7 @@ function drawbtnex22() {
       strokeWidth: 2
     },
     label: {
-      text: arrattri21[5],
+      text: arrattri23[2],
       fill: 'black',
       fontSize: 16
     }
@@ -1043,7 +1043,7 @@ function drawbtnex22() {
   attri33.addTo(graph);
 
 
-  /************************************* Attribute for fourth entity ***************************************/
+  /************************************* Attribute for fourth entity  passenger ***************************************/
 
   var attri41 = new joint.shapes.standard.Ellipse();
   attri41.position(644, 354);
@@ -1057,7 +1057,7 @@ function drawbtnex22() {
       strokeWidth: 2
     },
     label: {
-      text: arrattri21[12],
+      text: arrattri24[0],
       fill: 'black',
       fontSize: 16
     }
@@ -1076,7 +1076,7 @@ function drawbtnex22() {
       strokeWidth: 2
     },
     label: {
-      text: arrattri21[13],
+      text: arrattri24[1],
       fill: 'black',
       fontSize: 16
     }
@@ -1095,7 +1095,7 @@ function drawbtnex22() {
       strokeWidth: 2
     },
     label: {
-      text: arrattri21[14],
+      text: arrattri24[2],
       fill: 'black',
       fontSize: 16
     }
@@ -1114,7 +1114,7 @@ function drawbtnex22() {
       strokeWidth: 2
     },
     label: {
-      text: arrattri21[15],
+      text: arrattri24[3],
       fill: 'black',
       fontSize: 16
     }
@@ -1133,7 +1133,7 @@ function drawbtnex22() {
       strokeWidth: 2
     },
     label: {
-      text: arrattri21[16],
+      text: arrattri24[4],
       fill: 'black',
       fontSize: 16
     }
