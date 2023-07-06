@@ -74,14 +74,11 @@ myarray.push(inpt21);
 for (let i = 0; i < tableRows.length; i++) {
   const cells = tableRows[i].getElementsByTagName("td");
   const value1 = cells[0].textContent;
-  if ((cells[0].innerHTML== inpt21) && (cells[2].innerHTML== "Yes")) {
+  if ((cells[0].innerHTML== inpt21) ) {
     areInserted = true;
     break;
   }
-  if ((cells[0].innerHTML== inpt21) && (cells[2].innerHTML== "No")) {
-    areInserted = true;
-    break;
-  }
+
 }
 
    if (areInserted) {
