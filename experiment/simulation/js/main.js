@@ -161,18 +161,18 @@ function addbtnt1() {
   for (let i = 0; i < tableRows.length; i++) {
     const cells = tableRows[i].getElementsByTagName("td");
     const value1 = cells[0].textContent;
-    if ((cells[0].innerHTML == inpt1) ) {
+    if ((cells[0].innerHTML == inpt1)) {
       areInserted = true;
       break;
     }
-   
+
   }
 
   if (areInserted) {
     alert("Value is already inserted in the table.");
   } else {
 
-    if ((inpt1 !== "")  && (checkedvalue.checked)) {
+    if ((inpt1 !== "") && (checkedvalue.checked)) {
 
 
 
@@ -343,16 +343,19 @@ function addbtnt1() {
 
 
 /*************************************Function for Table 2***********************************************/
-let inpt2;
+var inpt2;
 var arrattri1 = [];
 var arrattri2 = [];
+var arrattri = [];
+var arrattrii = [];
+var entval;
 function addbtnt2() {
 
 
   let newLi;
   inpt2 = document.getElementById("inp2").value;
   var selent = document.getElementById("selectentity");
-  var entval = selent.options[selent.selectedIndex].value;
+  entval = selent.options[selent.selectedIndex].value;
   var checkedvalueprkey = document.getElementById("chkinp2");
   /* var rbtn=document.createElement("button");
   rbtn.setAttribute("id", "removebtnuc");
@@ -400,43 +403,91 @@ function addbtnt2() {
   if (inpt2 == "") {
     alert("Please Enter Attribute Before Clicking Add Button");
   }
-
   else {
-    document.getElementById("attri_" + entval).appendChild(newLi);
-    var arrattri = arrattri1.push(inpt2);
-    console.log(arrattri);
-    document.getElementById("inp2").value = "";
-    /*var arrattri=  document.getElementById("tbl5").rows[1].cells[1].innerText;
-  arrattri1.push(arrattri);
-  var arrattri22 = document.getElementById("tbl5").rows[2].cells[1].innerText;
-  arrattri2.push(arrattri22);*/
+    let isInserted = false;
+    const myLista = document.getElementById("attri_" + entval);
+    const listItemsa = myLista.getElementsByTagName("li");
+    for (let i = 0; i < listItemsa.length; i++) {
+      if (listItemsa[i].textContent == inpt2) {
+        isInserted = true;
+        break;
+      }
+    }
+    if (isInserted) {
+      alert("You have already enter a attribute by the same name.");
+      document.getElementById("inp2").value = "";
+    }
+    else {
+      document.getElementById("attri_" + entval).appendChild(newLi);
+      //arrattri = arrattri1.push(inpt2);
+      //console.log(arrattri);
+      document.getElementById("inp2").value = "";
+    }
+
+
+  }
+ 
+
+  var myTable = document.getElementById('tbodyt4');
+  var cellIndex = 1; // Index of the desired cell (1-based)
+
+  // Iterate over each row
+  for (var i = 0; i < myTable.rows.length; i++) {
+    if (i == 0 || i == 1) {
+      var row = myTable.rows[i];
+      var cell = row.cells[cellIndex];
+      var listItems = cell.getElementsByTagName('li');
+
+
+      // Read and store the values from list items in the array
+      var rowValues = [];
+      for (var j = 0; j < listItems.length; j++) {
+        var listItem = listItems[j];
+        var listItemValue = listItem.textContent.trim();
+        rowValues.push(listItemValue);
+
+      }
+
+      if (i == 0) {
+        arrattri.push(rowValues);
+        
+        if (listItems.length != 6) {
+          document.getElementById('drawbtn').disabled = true;
+        }
+        else {
+          document.getElementById('drawbtn').disabled = false;
+        }
+
+        
+
+      } if (i == 1) {
+
+        arrattrii.push(rowValues);
+
+        if (listItems.length != 2) {
+          document.getElementById('drawbtn').disabled = true;
+        }
+        else {
+          document.getElementById('drawbtn').disabled = false;
+        }
+      }
+
+    }
   }
 
+  var mergedArray = [].concat.apply([], arrattri);
+  arrattri1 = [...new Set(mergedArray)]; //removes duplicates
+  console.log(arrattri1);
 
-  //document.getElementById("ftbl2").reset();
-
-
-
-
-
-
-  /*var category= document.getElementById("selectcat");
- var checkedvalue= document.querySelector('input[type=checkbox][name=categoryselect]:checked').value
-  alert(checkedvalue);
-
-  /*********************************************** Category-People*************************************************/
-  /*if(((checkedvalue=="Mr Roy") || (checkedvalue=="boss")|| (checkedvalue=="son") || (checkedvalue=="Mr Bose") || (checkedvalue=="drives") || (checkedvalue=="passenger") || (checkedvalue=="persons") || (checkedvalue=="neighbour"))&& (category.options[category.selectedIndex].value==3) ){
-      let pnewLi = document.createElement("li");
-      let liTextNodep = document.createTextNode(checkedvalue);
-      pnewLi.appendChild(liTextNodep);
-      // this just makes sure a user cant enter in a blank value
-     
-      document.getElementById('peoplet3').appendChild(pnewLi);*/
-
-
-
-
+  var mergedArray2 = [].concat.apply([], arrattrii);
+  arrattri2 = [...new Set(mergedArray2)]; //removes duplicates
+  console.log(arrattri2);
 }
+
+
+// table row 1
+
+
 
 
 /*************************************Function for Table 3***********************************************/
@@ -511,6 +562,7 @@ function addbtnt3() {
 
 
 
+
 }
 
 
@@ -537,11 +589,17 @@ function removerowuc(btndel) {
     $(btndel).closest("li").remove();
     //$("#selectactuc1").find('option[value="' + listItemValue + '"]').remove();
     //$("#selectactuc2").find('option[value="' + listItemValue + '"]').remove();
+  }
 
-
-    // x.remove(typeof(btndel));
-
-  } else {
+  // x.remove(typeof(btndel));
+  /* Remove item from array */
+  /*var index = arrattri1.indexOf(listItemValue);
+         if (index !== -1) {
+           arrattri1.splice(index, 1);
+         }
+         console.log(arrattri1);
+     }*/
+  else {
     return false;
   }
 
@@ -769,7 +827,7 @@ function drawbtnex21() {
       strokeWidth: 2
     },
     label: {
-      text: arrattri1[6],
+      text: arrattri2[0],
       fill: 'black',
       fontSize: 16
     }
@@ -790,7 +848,7 @@ function drawbtnex21() {
       strokeWidth: 2
     },
     label: {
-      text: arrattri1[7],
+      text: arrattri2[1],
       fill: 'black',
       fontSize: 16
     }
