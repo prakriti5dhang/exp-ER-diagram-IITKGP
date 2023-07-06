@@ -347,7 +347,7 @@ var inpt2;
 var arrattri1 = [];
 var arrattri2 = [];
 var arrattri = [];
-var arrattrii2 = [];
+var arrattrii = [];
 var entval;
 
 function addbtnt2() {
