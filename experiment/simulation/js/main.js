@@ -349,6 +349,7 @@ var arrattri2 = [];
 var arrattri = [];
 var arrattrii = [];
 var entval;
+var length1,length2;
 
 function addbtnt2() {
 
@@ -480,11 +481,16 @@ function addbtnt2() {
   var mergedArray = [].concat.apply([], arrattri);
   arrattri1 = [...new Set(mergedArray)]; //removes duplicates
   console.log(arrattri1);
+  length1 = arrattri1.length;
+  console.log(length1);
+
 
   var mergedArray2 = [].concat.apply([], arrattrii);
   arrattri2 = [...new Set(mergedArray2)]; //removes duplicates
   console.log(arrattri2);
-     
+  length2 = arrattri2.length;
+  console.log(length2);
+
  
 }
 
@@ -620,7 +626,18 @@ function removerowa(btndel) {
 
 
 function drawbtnex21() {
-  document.getElementById('dispuml1').style.display = "block";
+
+  if((length1 == 6)&& (length2 == 2) ){
+
+    document.getElementById('dispuml1').style.display = "block";
+  }
+  
+  else{
+    alert("Enter all attributes for each entities");
+   //
+   document.getElementById('dispuml1').style.display = "none";
+  }
+  
 
   var namespace = joint.shapes;
 

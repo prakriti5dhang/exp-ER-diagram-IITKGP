@@ -263,6 +263,7 @@ var arrattrii1 = [];
 var arrattrii2 = [];
 var arrattrii3 = [];
 var arrattrii4 = [];
+var length21,length22,length23,length24;
 function addbtnt22() {
 
 
@@ -351,7 +352,7 @@ function addbtnt22() {
       if (i == 0) {
         arrattrii1.push(rowValuesex2);
 
-        if (listItemsex2.length != 6) {
+        if (listItemsex2.length != 3) {
           //document.getElementById('drawbtn').disabled = true;
         }
         else {
@@ -364,7 +365,7 @@ function addbtnt22() {
 
         arrattrii2.push(rowValuesex2);
 
-        if (listItemsex2.length != 2) {
+        if (listItemsex2.length != 3) {
           //  document.getElementById('drawbtn').disabled = true;
         }
         else {
@@ -376,7 +377,7 @@ function addbtnt22() {
 
         arrattrii3.push(rowValuesex2);
 
-        if (listItemsex2.length != 2) {
+        if (listItemsex2.length != 6) {
           //  document.getElementById('drawbtn').disabled = true;
         }
         else {
@@ -388,7 +389,7 @@ function addbtnt22() {
 
         arrattrii4.push(rowValuesex2);
 
-        if (listItemsex2.length != 2) {
+        if (listItemsex2.length != 5) {
           //  document.getElementById('drawbtn').disabled = true;
         }
         else {
@@ -402,18 +403,26 @@ function addbtnt22() {
   var mergedArray2 = [].concat.apply([], arrattrii1);
   arrattri21 = [...new Set(mergedArray2)]; //removes duplicates
   console.log(arrattri21);
+  length21 = arrattri21.length;
+  console.log(length21);
 
   var mergedArray2b = [].concat.apply([], arrattrii2);
   arrattri22 = [...new Set(mergedArray2b)]; //removes duplicates
   console.log(arrattri22);
+   length22 = arrattri22.length;
+  console.log(length22);
 
   var mergedArray2c = [].concat.apply([], arrattrii3);
   arrattri23 = [...new Set(mergedArray2c)]; //removes duplicates
   console.log(arrattri23);
+  length23 = arrattri23.length;
+  console.log(length23);
 
   var mergedArray2d = [].concat.apply([], arrattrii4);
   arrattri24 = [...new Set(mergedArray2d)]; //removes duplicates
   console.log(arrattri24);
+  length24 = arrattri24.length;
+  console.log(length24);
 
 
 
@@ -427,9 +436,11 @@ function addbtnt23() {
   var objsel21 = document.getElementById("selectentt31b");
   var dobj21 = objsel21.options[objsel21.selectedIndex].value;
   //alert(dobj1);
-  var inpt23 = document.getElementById("inp23").value;
-  arrrel2.push(inpt23);
-  //alert(inpt3);
+  //var inpt23 = document.getElementById("inp23").value;
+  //arrrel2.push(inpt23);
+  var objrel22 = document.getElementById("selectrel3");
+  var relobj22 = objrel22.options[objrel22.selectedIndex].text;
+
   var objsel22 = document.getElementById("selectentt32b");
   var dobj22 = objsel22.options[objsel22.selectedIndex].value;
   // alert(dobj2);
@@ -458,9 +469,14 @@ function addbtnt23() {
   if (dobj21 == dobj22) {
     alert(dobj21 + "  is not related to  " + dobj22);
   }
-  else if (inpt23 == "") {
-    alert("Relation cannot be blank");
+  else if ((objsel21.options.length === 0 ) || (objsel22.options.length === 0 )) {
+    alert("Select entity from the dropdown");
   }
+
+ else if (relobj22 == "Select Relation") {
+    alert("Select relation from the dropdown");
+  }
+
   else if ((dobj21 !== dobj22)) {
 
     var tr = document.createElement('tr');
@@ -472,7 +488,7 @@ function addbtnt23() {
     var td4 = document.createElement("td");
     var td5 = document.createElement("td");
     var tdval1 = document.createTextNode(dobj21);
-    var tdval2 = document.createTextNode(inpt23);
+    var tdval2 = document.createTextNode(relobj22);
     var tdval3 = document.createTextNode(dobj22);
     var tdval4 = document.createTextNode(dobjconst2);
 
@@ -497,7 +513,9 @@ function addbtnt23() {
 
   }
 
-  document.getElementById("ftbl23").reset();
+  //document.getElementById("ftbl23").reset();
+
+  
 
 }
 
@@ -557,9 +575,19 @@ function removerowuc(btndel) {
 
 
 function drawbtnex22() {
+
+  
+if((length21 == 3)&& (length22 == 3)&&(length23 == 6)&&(length24 == 5) ){
   arrconstrt2 = consrting.split(/[ ,]+/);
   // console.log(arrconstrt2);
   document.getElementById('dispuml2').style.display = "block";
+}
+
+else{
+  alert("Enter all attributes for each entities");
+ //
+  document.getElementById('dispuml2').style.display = "none";
+}
   var namespace = joint.shapes;
 
   var graph = new joint.dia.Graph({}, { cellNamespace: namespace });
@@ -672,7 +700,7 @@ function drawbtnex22() {
 
     },
     label: {
-      text: arrrel2[0],
+      text: "Submit", //submit arrrel2[0]
       fill: 'black',
       fontSize: 11
     }
@@ -697,7 +725,7 @@ function drawbtnex22() {
 
     },
     label: {
-      text: arrrel2[1],
+      text: "Hires", // hires arrrel2[1]
       fill: 'black',
       fontSize: 11
     }
@@ -721,7 +749,7 @@ function drawbtnex22() {
 
     },
     label: {
-      text: arrrel2[2],
+      text: "Owns", //owns arrrel2[2]
       fill: 'black',
       fontSize: 11
     }
@@ -745,7 +773,7 @@ function drawbtnex22() {
 
     },
     label: {
-      text: arrrel2[3],
+      text: "Books", //books arrrel2[3]
       fill: 'black',
       fontSize: 11
     }
@@ -754,7 +782,7 @@ function drawbtnex22() {
   diamondrel4.rotate(40);
   diamondrel4.addTo(graph);
 
-  var diamondrel5 = new joint.shapes.standard.Rectangle(); ////passenger -driver
+  var diamondrel5 = new joint.shapes.standard.Rectangle(); //passenger -driver
 
   diamondrel5.position(557, 245);
   diamondrel5.resize(50, 50);
@@ -767,7 +795,7 @@ function drawbtnex22() {
 
     },
     label: {
-      text: arrrel2[4],
+      text: "Return", //return arrrel2[4]
       fill: 'black',
       fontSize: 11
     }
@@ -789,7 +817,7 @@ function drawbtnex22() {
 
     },
     label: {
-      text: arrrel2[5],
+      text: arrrel2[5], //drives
       fill: 'black',
       fontSize: 11
     }
@@ -1277,7 +1305,7 @@ function drawbtnex22() {
   linkr1.appendLabel({
     attrs: {
       text: {
-        text: arrconstrt2[0],
+        text: arrconstrt2[0], 
         fontSize: 16
       }
 
@@ -1476,7 +1504,7 @@ function drawbtnex22() {
 
 
 
-
+  
 
 
 }
